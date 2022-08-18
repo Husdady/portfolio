@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@tests/*": ["__test__/*"],
+      "@assets/*": ["assets/*"],
+      "@hooks/*": ["hooks/*"],
+      "@styles/*": ["styles/*"],
+      "@services/*": ["services/*"],
+      "@utils/*": ["utils/*"],
+      "%types%/*": ["prototypes/types/*"],
+      "@interfaces/*": ["prototypes/interfaces/*"],
+      "@common": ["components/common/_exports"],
+      "@layouts/*": ["components/layouts/*"]
+    }
+  }
+}

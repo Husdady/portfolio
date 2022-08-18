@@ -1,0 +1,16 @@
+[
+  {
+    "id": "as0kd12",
+    "language": "es",
+    "country": "Spain",
+    "imgAlt": "spain",
+    "imgSrc": "thumbnails/flags/spain.webp"
+  },
+  {
+    "id": "b3kas18",
+    "language": "en",
+    "country": "United States",
+    "imgAlt": "usa",
+    "imgSrc": "thumbnails/flags/usa.webp"
+  }
+]

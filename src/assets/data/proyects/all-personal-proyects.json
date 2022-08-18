@@ -1,0 +1,59 @@
+[
+  {
+    "id": "sp102p",
+    "name": "Universal Pokedex",
+    "proyectImg": "https://i.imgur.com/R6kh9U6.png",
+    "url": "https://universal-pokedex.netlify.app"
+  },
+  {
+    "id": "xas81j",
+    "proyectImg": "https://i.imgur.com/2bGmmW2.png",
+    "url": "https://husdady.github.io/calculadora",
+    "name": {
+      "es": "Calculadora",
+      "en": "Calculator"
+    }
+  },
+  {
+    "id": "cm42a0",
+    "proyectImg": "https://i.imgur.com/y1tyYaY.png",
+    "url": "https://husdady.github.io/cuanto-sabes-sobre-el-universo",
+    "name": {
+      "es": "¿Cuánto sabes sobre el universo?",
+      "en": "How much do you know about the universe?"
+    }
+  },
+  {
+    "id": "hag698",
+    "proyectImg": "https://i.imgur.com/e8gBDLw.png",
+    "url": "https://husdady.github.io/creador-de-amistades",
+    "name": {
+      "es": "Creador de amistades",
+      "en": "Friendship maker"
+    }
+  },
+  {
+    "id": "t47ste",
+    "proyectImg": "https://i.imgur.com/hovGm9N.png",
+    "url": "https://husdady.github.io/simulador-de-compras",
+    "name": {
+      "es": "Simulador de compras",
+      "en": "Shopping simulator"
+    }
+  },
+  {
+    "id": "a210pl",
+    "proyectImg": "https://i.imgur.com/7VcUCl5.png",
+    "url": "https://husdady.github.io/validar-formulario",
+    "name": {
+      "es": "¿Cómo validar un formulario?",
+      "en": "How to validate a form?"
+    }
+  },
+  {
+    "id": "bj2i53",
+    "name": "Medyfie",
+    "type": "app_mobile",
+    "proyectImg": "https://i.imgur.com/L5JGdRI.png"
+  }
+]

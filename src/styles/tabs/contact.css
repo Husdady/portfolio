@@ -1,0 +1,71 @@
+.tm-form .form-control {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.tm-form .form-control:focus {
+  box-shadow: 0 0 4.5px 2px var(--bs-danger);
+}
+
+.tm-form textarea {
+  height: 300px !important;
+}
+
+.all-social-networks .social {
+  padding: 8px 30px;
+  border-radius: 20px !important;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9em;
+}
+
+.all-social-networks .social:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.all-social-networks .social:nth-of-type(1) {
+  background-color: var(--bs-green);
+}
+
+.all-social-networks .social:nth-of-type(2) {
+  background-color: #0e76a8;
+}
+
+.all-social-networks .social:nth-of-type(3) {
+  background-color: #171515;
+  border: 1px solid #dddddd;
+}
+
+.all-social-networks .social i {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .tm-form {
+    width: 100%;
+  }
+
+  .tm-social {
+    width: 100%;
+    margin-top: 30px;
+    border-top: 3px solid var(--bs-danger);
+    border-left: 0;
+  }
+  .all-social-networks {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .all-social-networks {
+    width: 80%;
+  }
+}
+
+@media (max-width: 320px) {
+  .all-social-networks {
+    width: 100%;
+  }
+}

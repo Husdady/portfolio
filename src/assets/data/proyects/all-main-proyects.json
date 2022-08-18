@@ -1,0 +1,72 @@
+[
+  {
+    "id": "jy5w23",
+    "name": "Emprendimiento y Salud",
+    "proyectImg": "https://i.imgur.com/JnwYYjV.png",
+    "url": "https://emprendimientoysalud.com"
+  },
+  {
+    "id": "z2lk90",
+    "name": "CMS - Emprendimiento y Salud",
+    "proyectImg": "https://i.imgur.com/1ks4DUR.png",
+    "url": "https://app-emprendimiento-y-salud.herokuapp.com"
+  },
+  {
+    "id": "f71m0p",
+    "name": "Nutrición y Salud Personal",
+    "proyectImg": "https://i.imgur.com/KuUOjuZ.png",
+    "url": "https://nutricionysaludpersonal.blogspot.com"
+  },
+  {
+    "id": "de5v82",
+    "name": "Multiservicios Espay",
+    "proyectImg": "https://i.imgur.com/uUg7dW4.png",
+    "url": "https://multiservicios-espay.netlify.com"
+  },
+  {
+    "id": "zl7sh6",
+    "name": "CMS - Multiservicios Espay",
+    "proyectImg": "https://i.imgur.com/3wWP0x8.png",
+    "url": "https://multiservicios-espay-dashboard.herokuapp.com"
+  },
+  {
+    "id": "aq182o",
+    "name": "Intellitec",
+    "proyectImg": "https://i.imgur.com/LHmEdM6.png",
+    "url": "https://intellitec.pe"
+  },
+  {
+    "id": "h209sn",
+    "name": "Movies Awards Ballot",
+    "proyectImg": "https://i.imgur.com/rV69e7N.png",
+    "url": "https://husdady.github.io/movie-awards-ballot"
+  },
+  {
+    "id": "ba8k0s",
+    "name": "Pokemon Mistery Dungeon",
+    "proyectImg": "https://i.imgur.com/ZWblZ2o.png",
+    "url": "http://pokemon-mistery-dungeon.netlify.app"
+  },
+  {
+    "id": "sah816",
+    "name": "Pathpoint",
+    "proyectImg": "https://i.imgur.com/uWzFGi5.png"
+  },
+  {
+    "id": "klp196",
+    "name": "Selenium IDE Tests",
+    "proyectImg": "https://i.imgur.com/jzUwgJS.png"
+  },
+  {
+    "id": "sy685i",
+    "name": "Age of Empires II",
+    "proyectImg": "https://i.imgur.com/kL2k8un.png",
+    "url": "https://age-of-empires-conquerors.vercel.app"
+  },
+  {
+    "id": "89ufj4",
+    "name": "API Whatsapp",
+    "proyectImg": "https://i.imgur.com/RXoO10D.png",
+    "url": "https://apiwhatsap.com"
+  }
+]

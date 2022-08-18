@@ -1,0 +1,22 @@
+[
+  {
+    "name": "skills",
+    "icon": "jedi",
+    "dictionaryKey": "tab-as8po9"
+  },
+  {
+    "name": "proyects",
+    "icon": "file-alt",
+    "dictionaryKey": "tab-xcg527"
+  },
+  {
+    "name": "galery",
+    "icon": "images",
+    "dictionaryKey": "tab-aslp21"
+  },
+  {
+    "name": "contact",
+    "icon": "address-book",
+    "dictionaryKey": "tab-65asu2"
+  }
+]

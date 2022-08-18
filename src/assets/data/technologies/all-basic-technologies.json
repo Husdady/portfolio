@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Jade",
+    "level": 30
+  },
+  {
+    "name": "Sass",
+    "level": 30
+  },
+  {
+    "name": "Webpack",
+    "level": 40
+  },
+  {
+    "name": "Material UI",
+    "level": 30
+  },
+  {
+    "name": "Python",
+    "level": 25
+  },
+  {
+    "name": "Eslint",
+    "level": 20
+  },
+  {
+    "name": "Jest",
+    "level": 10
+  },
+  {
+    "name": "Jenkins",
+    "level": 15
+  },
+  {
+    "name": "Nest.js",
+    "level": 25
+  },
+  {
+    "name": "Selenium Python",
+    "level": 10
+  },
+  {
+    "name": "NRQL",
+    "level": 10
+  }
+]
