@@ -8,7 +8,7 @@ import SendEmailMessageType from '%types%/sendEmailMessage.type'
 import { EMAIL_SERVICE, EMAIL_TEMPLATE, EMAIL_USER } from './credentials'
 
 // Utils
-import Validations from '@utils/Validations'
+// import Validations from '@utils/Validations'
 
 // Enviar mensaje a mi correo personal
 export default async function sendEmailMessage({
