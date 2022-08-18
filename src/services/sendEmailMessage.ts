@@ -1,11 +1,11 @@
 // Librarys
-import emailjs from '@emailjs/browser'
+// import emailjs from '@emailjs/browser'
 
 // Types
 import SendEmailMessageType from '%types%/sendEmailMessage.type'
 
 // Services
-import { EMAIL_SERVICE, EMAIL_TEMPLATE, EMAIL_USER } from './credentials'
+// import { EMAIL_SERVICE, EMAIL_TEMPLATE, EMAIL_USER } from './credentials'
 
 // Utils
 // import Validations from '@utils/Validations'
@@ -27,7 +27,7 @@ export default async function sendEmailMessage({
     }
 
     // Enviar mensaje a email
-    await emailjs.send(EMAIL_SERVICE, EMAIL_TEMPLATE, values, EMAIL_USER)
+    // await emailjs.send(EMAIL_SERVICE, EMAIL_TEMPLATE, values, EMAIL_USER)
 
     // Ocultar alerta de error
     refs.dangerAlert.current.hide()
