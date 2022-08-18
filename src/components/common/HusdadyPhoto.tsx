@@ -8,7 +8,7 @@ export default function HusdadyPhoto() {
         fluid
         alt="developer-husdady"
         className="h-100 w-100"
-        src="https://i.imgur.com/x4KMctc.jpg"
+        src="https://i.imgur.com/1heT2kN.jpg"
         style={{ objectFit: 'cover' }}
       />
     </div>
