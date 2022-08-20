@@ -11,9 +11,8 @@ import { Container } from 'react-bootstrap'
 // Interfaces
 import { SkillType } from '@interfaces/Tabs.interface'
 
-// JSON
-import allMainTechnologies from '@assets/data/technologies/all-main-technologies.json'
-import allBasicTechnologies from '@assets/data/technologies/all-basic-technologies.json'
+const allMainTechnologies: SkillType[] = require('@data/all-main-technologies.json')
+const allBasicTechnologies: SkillType[] = require('@data/all-basic-technologies.json')
 
 const renderSkills = (skills: SkillType[]) => {
   return skills.map((skill: SkillType, i: number) => (

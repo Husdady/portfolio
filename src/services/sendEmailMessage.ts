@@ -1,14 +1,11 @@
 // Librarys
-// import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser'
 
 // Types
 import SendEmailMessageType from '%types%/sendEmailMessage.type'
 
 // Services
-// import { EMAIL_SERVICE, EMAIL_TEMPLATE, EMAIL_USER } from './credentials'
-
-// Utils
-// import Validations from '@utils/Validations'
+import { EMAIL_SERVICE, EMAIL_TEMPLATE, EMAIL_USER } from './credentials'
 
 // Enviar mensaje a mi correo personal
 export default async function sendEmailMessage({
@@ -18,22 +15,29 @@ export default async function sendEmailMessage({
   resetForm
 }: SendEmailMessageType) {
   try {
-    // Mostrar loading en el botón "Send message"
     if (
       'showLoading' in extraData &&
       typeof extraData.showLoading === 'function'
     ) {
-      extraData.showLoading()
+      extraData.showLoading() // Mostrar loading en el botón "Send message"
     }
 
-    // Enviar mensaje a email
-    // await emailjs.send(EMAIL_SERVICE, EMAIL_TEMPLATE, values, EMAIL_USER)
+    if (
+      typeof EMAIL_SERVICE === 'string' &&
+      typeof EMAIL_TEMPLATE === 'string' &&
+      typeof EMAIL_USER === 'string'
+    ) {
+      // Enviar mensaje al correo electrónico de author (husdadymena@gmail.com)
+      await emailjs.send(EMAIL_SERVICE, EMAIL_TEMPLATE, values, EMAIL_USER)
+    }
 
-    // Ocultar alerta de error
-    refs.dangerAlert.current.hide()
+    if (refs.dangerAlert.current !== null) {
+      refs.dangerAlert.current.hide() // Ocultar alerta de error
+    }
 
-    // Mostrar alerta de éxito
-    refs.successAlert.current.show()
+    if (refs.successAlert.current !== null) {
+      refs.successAlert.current.show() // Mostrar alerta de éxito
+    }
 
     // Resetear formulario
     resetForm()
@@ -41,11 +45,13 @@ export default async function sendEmailMessage({
     // eslint-disable-next-line no-console
     console.error('[sendEmailMessage.error]', err)
 
-    // Mostrar alerta de error
-    refs.dangerAlert.current.show()
+    if (refs.dangerAlert.current !== null) {
+      refs.dangerAlert.current.show() // Mostrar alerta de error
+    }
 
-    // Ocultar alerta de éxito
-    refs.successAlert.current.hide()
+    if (refs.successAlert.current !== null) {
+      refs.successAlert.current.hide() // Ocultar alerta de éxito
+    }
   }
 
   // Ocultar loading en el botón "Send message"

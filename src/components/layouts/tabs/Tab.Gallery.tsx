@@ -5,7 +5,7 @@ import MultiLangText from '@layouts/common/MultiLangText'
 import Gallery from 'react-grid-gallery'
 
 // JSON
-import gallery from '@assets/data/gallery/photos.json'
+import gallery from '@data/photos.json'
 
 const galleryStyle: React.CSSProperties = {
   overflowY: 'auto',

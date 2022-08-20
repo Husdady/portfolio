@@ -1,8 +1,10 @@
 // Interfaces
 import { LanguageType } from '@interfaces/Languages.interfaces'
+
+// Utils
 import Validations from './Validations'
 
-const languages: LanguageType[] = require('@assets/data/common/languages.json')
+const languages: LanguageType[] = require('@data/languages.json')
 
 export default class Helper {
   /**

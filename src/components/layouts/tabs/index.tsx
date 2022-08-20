@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { TabType, PageTabsType } from '@interfaces/Tabs.interface'
 
 // JSON
-const tabs: TabType[] = require('@assets/data/common/tabs.json')
+const tabs: TabType[] = require('@data/tabs.json')
 
 const pageTabs: PageTabsType = {
   skills: <Skills />,

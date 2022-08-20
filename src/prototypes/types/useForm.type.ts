@@ -39,15 +39,15 @@ export type SchemaRuleType = {
   max?: LimitType
 }
 
+export type ValidationSchemaType = {
+  [key: string]: Omit<SchemaRuleType, 'field'>
+}
+
 export type FormDataType = {
   values: ValuesType
   resetForm: Function
   extraData: ExtraDataType
   setErrors: (errors: ErrorsType) => void
-}
-
-export type ValidationSchemaType = {
-  [key: string]: Omit<SchemaRuleType, 'field'>
 }
 
 export type UseFormProps = {
@@ -67,15 +67,14 @@ export type UseFormReturnType = LanguageType & {
   setFieldValue: (field: string, value: ValueType) => void
   multipleSetField: (fields: ValuesType) => void
   handleSubmit: (
-    e: React.FormEvent<HTMLFormElement>,
     extraData: ExtraDataType
-  ) => void
+  ) => (e: React.FormEvent<HTMLFormElement>) => void
 }
 
 export type RunValidationSubmitType = {
   formValues: ValuesType
   schemaErrors: ErrorsType
-  extraData: ExtraDataType
+  extraData?: ExtraDataType
 }
 
 export type RunValidationSchemaRulesType = {

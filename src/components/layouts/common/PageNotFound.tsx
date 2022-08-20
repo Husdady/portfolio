@@ -8,7 +8,7 @@ import { Button } from '@common'
 import Image from 'react-bootstrap/Image'
 import { useHistory } from 'react-router-dom'
 
-const img = require('@assets/thumbnails/page-not-found.webp')
+const img = require('@images/page-not-found.webp')
 
 const imgStyle: React.CSSProperties = {
   width: '20%',

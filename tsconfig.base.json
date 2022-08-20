@@ -3,7 +3,8 @@
     "baseUrl": "src",
     "paths": {
       "@tests/*": ["__test__/*"],
-      "@assets/*": ["assets/*"],
+      "@data/*": ["data/*"],
+      "@images/*": ["images/*"],
       "@hooks/*": ["hooks/*"],
       "@styles/*": ["styles/*"],
       "@services/*": ["services/*"],

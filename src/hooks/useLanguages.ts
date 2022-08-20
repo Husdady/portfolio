@@ -8,7 +8,7 @@ import { LanguageType } from '@interfaces/Languages.interfaces'
 import Helper from '@utils/Helper'
 import { LANG } from '@utils/statics'
 
-const languages: LanguageType[] = require('@assets/data/common/languages.json')
+const languages: LanguageType[] = require('@data/languages.json')
 
 export default function useLanguages() {
   const [lang, setLang] = useLocalStorage(

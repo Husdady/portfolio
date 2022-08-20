@@ -7,7 +7,7 @@ import useLanguages from '@hooks/useLanguages'
 // Interfaces
 import { FlagType, FlagProps } from '@interfaces/Languages.interfaces'
 
-const flags: FlagType[] = require('@assets/data/common/flags.json')
+const flags: FlagType[] = require('@data/flags.json')
 
 export default function Languages() {
   const { lang, setLang } = useLanguages()
@@ -58,7 +58,7 @@ export const Flag = React.memo<FlagProps>(
           className="scale"
           alt={alt}
           title={title}
-          src={require('@assets/' + url)}
+          src={require('@images/' + url)}
           onClick={() => {
             if (isActive) return false
             onChangeLanguage(language.toUpperCase())

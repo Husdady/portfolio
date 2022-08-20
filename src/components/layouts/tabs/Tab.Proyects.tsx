@@ -14,9 +14,10 @@ import {
 } from '@interfaces/Tabs.interface'
 
 // JSON
-import allMainProyects from '@assets/data/proyects/all-main-proyects.json'
-import allPersonalProyects from '@assets/data/proyects/all-personal-proyects.json'
 import useLanguages from '@hooks/useLanguages'
+
+const allMainProyects: ProyectType[] = require('@data/all-main-proyects.json')
+const allPersonalProyects: ProyectType[] = require('@data/all-personal-proyects.json')
 
 const styleImgForAppWeb: React.CSSProperties = {
   objectFit: 'cover'

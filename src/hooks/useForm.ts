@@ -194,21 +194,22 @@ export default function useForm({
   )
 
   // Método que se ejecuta cuando el formulario es válido
-  const handleSubmit = React.useCallback(
-    (e: React.FormEvent<HTMLFormElement>, extraData: ExtraDataType = {}) => {
-      e.preventDefault()
-      if (Validations.isEmptyArray(schema.fields)) return false
-      const schemaErrors = runValidateAllFields(values)
+  const handleSubmit = React.useCallback((currentValues: ValuesType) => {
+    return (extraData: ExtraDataType) => {
+      return (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        if (Validations.isEmptyArray(schema.fields)) return false
+        const schemaErrors = runValidateAllFields(currentValues)
 
-      // Validar evento submit
-      return runValidationSubmit({
-        formValues: values,
-        extraData: extraData,
-        schemaErrors: schemaErrors
-      })
-    },
-    [values]
-  )
+        // Validar evento submit
+        return runValidationSubmit({
+          extraData: extraData,
+          formValues: currentValues,
+          schemaErrors: schemaErrors
+        })
+      }
+    }
+  }, [])
 
   // Verificar si es formulario válido
   const verifyIfIsValidForm = React.useCallback(() => {
@@ -266,11 +267,14 @@ export default function useForm({
     setErrors: setErrors,
     setFieldValue: setFieldValue,
     multipleSetField: multipleSetField,
-    handleSubmit: handleSubmit,
     resetForm: resetForm,
     isValidForm: isValidForm,
     formHasBeenEdited: formHasBeenEdited,
     language: lang,
-    dictionary: dictionary
+    dictionary: dictionary,
+    handleSubmit: (extraData: ExtraDataType) => {
+      const callback = handleSubmit(values)
+      return callback(extraData)
+    }
   }
 }

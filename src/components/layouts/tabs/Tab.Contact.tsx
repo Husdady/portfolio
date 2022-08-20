@@ -31,7 +31,7 @@ const loadingStyle = {
   style: { marginLeft: 40, marginRight: 40 }
 }
 
-const allSocialNetworks: SocialType[] = require('@assets/data/contact/all-social-networks.json')
+const allSocialNetworks: SocialType[] = require('@data/all-social-networks.json')
 
 const mySocialNetworks: React.ReactNode[] = allSocialNetworks.map(
   (social: SocialType, i: number) => (
@@ -89,6 +89,12 @@ export const ContactForm = () => {
       }
     })
 
+  const refAction = React.useCallback((action: string) => {
+    if (refSubmitButton.current !== null) {
+      refSubmitButton.current[action as keyof typeof refSubmitButton.current]()
+    }
+  }, [])
+
   // Actualizar un campo del formulario
   const handleChangeField = React.useCallback(
     (field: string) => {
@@ -99,25 +105,17 @@ export const ContactForm = () => {
     [language]
   )
 
-  // Evento 'submit' en formulario
-  const handleSubmitForm = React.useCallback(
-    (event: React.FormEvent<HTMLFormElement>) => {
-      if (refSubmitButton.current !== null) {
-        return handleSubmit(event, {
-          showLoading: refSubmitButton.current.showLoading,
-          hideLoading: refSubmitButton.current.hideLoading
-        })
-      }
-    },
-    []
-  )
-
   return (
     <Container fluid className="tm-form px-0 px-md-3 px-lg-3">
       <h2 className="mb-3 text-danger">
         <MultiLangText dictionaryKey="contact-xaks20" />
       </h2>
-      <form onSubmit={handleSubmitForm}>
+      <form
+        onSubmit={handleSubmit({
+          showLoading: () => refAction('showLoading'),
+          hideLoading: () => refAction('hideLoading')
+        })}
+      >
         {/* Campo 'name' en el formulario */}
         <input
           type="text"

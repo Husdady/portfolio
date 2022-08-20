@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { HashtagType } from '@interfaces/Profile.interface'
 
 // JSON
-import hashtags from '@assets/data/common/hashtags.json'
+import hashtags from '@data/hashtags.json'
 
 export default function Profile() {
   return (
