@@ -19,6 +19,10 @@
   font-size: 0.9em;
 }
 
+.all-social-networks .social > a {
+  text-decoration: none;
+}
+
 .all-social-networks .social:hover {
   cursor: pointer;
   opacity: 0.6;
@@ -32,13 +36,10 @@
   background-color: #0e76a8;
 }
 
-.all-social-networks .social:nth-of-type(3) {
+.all-social-networks .social:nth-of-type(3),
+.all-social-networks .social:nth-of-type(4) {
   background-color: #171515;
   border: 1px solid #dddddd;
-}
-
-.all-social-networks .social i {
-  margin-right: 5px;
 }
 
 @media (max-width: 768px) {

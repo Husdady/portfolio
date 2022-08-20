@@ -13,5 +13,10 @@
     "name": "Github",
     "icon": ["fab", "github"],
     "accountLink": "https://github.com/Husdady"
+  },
+  {
+    "name": "Medium",
+    "icon": ["fab", "medium"],
+    "accountLink": "https://medium.com/@husdadymena"
   }
 ]
