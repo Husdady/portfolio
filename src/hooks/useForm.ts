@@ -272,9 +272,6 @@ export default function useForm({
     formHasBeenEdited: formHasBeenEdited,
     language: lang,
     dictionary: dictionary,
-    handleSubmit: (extraData: ExtraDataType) => {
-      const callback = handleSubmit(values)
-      return callback(extraData)
-    }
+    handleSubmit: handleSubmit(values)
   }
 }

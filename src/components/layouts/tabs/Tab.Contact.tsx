@@ -166,7 +166,7 @@ export const ContactForm = () => {
         ref={refSuccessAlert}
         variant="success"
         className="mt-4"
-        title="Your message was successfully sent to my personal email"
+        title={dictionary['contact-kkk996']}
       />
 
       {/* Alerta de error */}
@@ -174,7 +174,7 @@ export const ContactForm = () => {
         ref={refDangerAlert}
         variant="danger"
         className="mt-4"
-        title="There was an error sending your message to my personal email"
+        title={dictionary['contact-kkk995']}
       />
     </Container>
   )
