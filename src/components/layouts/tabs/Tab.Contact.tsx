@@ -11,9 +11,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Hooks
 import useForm from '@hooks/useForm'
+import useLanguages from '@hooks/useLanguages'
 
 // Services
 import sendEmailMessage from '@services/sendEmailMessage'
+import { CV_LINK_ES, CV_LINK_EN } from '@services/credentials'
 
 // Interfaces
 import { AlertRef } from '@interfaces/Alert.interface'
@@ -23,7 +25,7 @@ import { LoadingActions } from '@interfaces/Button.interface'
 // Types
 import { FormDataType } from '%types%/useForm.type'
 
-// Schemas
+// Utils
 import { ContactFormSchema } from '@utils/schemas'
 
 const buttonStyle: React.CSSProperties = { padding: '10px 30px' }
@@ -193,6 +195,25 @@ export const SocialNetworks = () => {
   )
 }
 
+export const CVLink = () => {
+  const { lang } = useLanguages()
+  const isESLang = lang === 'es'
+
+  return (
+    <a
+      target="_blank"
+      href={isESLang ? CV_LINK_ES : CV_LINK_EN}
+      rel="noreferrer"
+    >
+      <Button
+        icon="file-download"
+        title={<MultiLangText dictionaryKey="contact-as0125" />}
+        className="px-4 rounded bg-danger text-white h-100"
+      />
+    </a>
+  )
+}
+
 export const DownloadCV = () => {
   return (
     <Container
@@ -203,16 +224,7 @@ export const DownloadCV = () => {
       <h2 className="text-danger">
         <MultiLangText dictionaryKey="contact-yc712t" />:
       </h2>
-      <a
-        download
-        href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-      >
-        <Button
-          icon="file-download"
-          title={<MultiLangText dictionaryKey="contact-as0125" />}
-          className="px-4 rounded bg-danger text-white h-100"
-        />
-      </a>
+      <CVLink />
     </Container>
   )
 }
