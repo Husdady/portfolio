@@ -25,9 +25,17 @@ function generateAliases() {
 function generateJestAliases() {
   return keys.reduce((acc, key) => {
     const f = key.replace('/*', '') // Replace '/*' by ''
-    const field = `^${f}/(.*)$` // Define field
     const p = paths[key][0].replace('/*', '') // Select first array el and replace
-    const currentPath = `<rootDir>/src/${p}/$1` // Define path
+
+    // Field contains /*, return ^@path/(.*)$ else return @path
+    const field = /\/\*/g.test(key) ? `^${f}/(.*)$` : key
+
+    let currentPath = `<rootDir>/src/${p}`
+
+    // Path contains /*, concat /$1 to currentPath
+    if (/\/\*/g.test(paths[key][0])) {
+      currentPath += '/$1'
+    }
 
     return {
       ...acc,
@@ -38,6 +46,9 @@ function generateJestAliases() {
 
 const alias = generateAliases()
 const jestAlias = generateJestAliases()
+
+// eslint-disable-next-line no-console
+console.log('[jestAlias]', jestAlias)
 
 module.exports = {
   webpack: {

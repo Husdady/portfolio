@@ -4,8 +4,8 @@ export interface AlertRef {
 }
 
 export interface AlertProps {
-  title: string
-  variant: string
+  title?: string
+  variant?: string
   className?: string
 }
 

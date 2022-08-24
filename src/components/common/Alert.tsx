@@ -19,7 +19,6 @@ const icons: IconType = {
 const CustomAlert = React.forwardRef<AlertRef, AlertProps>(
   ({ title, variant, className }: AlertProps, ref) => {
     const [visible, setVisible] = React.useState<boolean>(false)
-
     const showAlert = React.useCallback(() => setVisible(true), [])
     const hideAlert = React.useCallback(() => setVisible(false), [])
 
