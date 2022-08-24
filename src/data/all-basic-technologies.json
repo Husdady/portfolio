@@ -1,7 +1,7 @@
 [
   {
     "name": "Jade",
-    "level": 30
+    "level": 15
   },
   {
     "name": "Sass",
@@ -21,7 +21,11 @@
   },
   {
     "name": "Eslint",
-    "level": 20
+    "level": 40
+  },
+  {
+    "name": "Prettier",
+    "level": 40
   },
   {
     "name": "Jest",
@@ -33,7 +37,7 @@
   },
   {
     "name": "Nest.js",
-    "level": 25
+    "level": 15
   },
   {
     "name": "Selenium Python",
@@ -41,6 +45,6 @@
   },
   {
     "name": "NRQL",
-    "level": 10
+    "level": 5
   }
 ]

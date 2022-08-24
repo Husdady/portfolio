@@ -1,4 +1,7 @@
+// Types
+import { MultiLangType } from '%types%/useForm.type'
+
 export interface HashtagType {
-  name: string
   delay: number
+  name: MultiLangType
 }

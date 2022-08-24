@@ -27,6 +27,10 @@ img {
   object-fit: cover;
 }
 
+.h-100vh {
+  height: 100vh;
+}
+
 .default-text {
   color: var(--tm-text);
 }

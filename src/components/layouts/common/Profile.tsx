@@ -7,7 +7,7 @@ import Languages from '@layouts/common/Languages'
 import MultiLangText from '@layouts/common/MultiLangText'
 
 // Librarys
-// import Typist from 'react-typist'
+import { TypeAnimation } from 'react-type-animation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Interfaces
@@ -15,6 +15,7 @@ import { HashtagType } from '@interfaces/Profile.interface'
 
 // JSON
 import hashtags from '@data/hashtags.json'
+import useLanguages from '@hooks/useLanguages'
 
 export default function Profile() {
   return (
@@ -25,24 +26,29 @@ export default function Profile() {
   )
 }
 
-const AboutMe = () => {
-  const HashTags = React.useCallback(() => {
-    return (
-      <React.Fragment>
-        {hashtags.map((hash: HashtagType, i, totalHashTags: HashtagType[]) => {
-          // const count = i !== totalHashTags.length - 1 ? hash.name.length : 0
+const Hashtags = () => {
+  const { lang } = useLanguages()
 
-          return (
-            <article key={i}>
-              <h5>{hash.name}</h5>
-              {/* <Typist.Backspace count={count} delay={hash.delay} /> */}
-            </article>
-          )
-        })}
-      </React.Fragment>
-    )
+  const abilities = React.useCallback((language: string) => {
+    return hashtags.reduce((acc: (string | number)[], hashtag: HashtagType) => {
+      return acc.concat(
+        hashtag.name[language as keyof typeof hashtag.name],
+        hashtag.delay
+      )
+    }, [])
   }, [])
 
+  return (
+    <TypeAnimation
+      speed={5}
+      repeat={Infinity}
+      sequence={abilities(lang)}
+      wrapper="h5"
+    />
+  )
+}
+
+const AboutMe = () => {
   return (
     <React.Fragment>
       <Languages />
@@ -57,15 +63,14 @@ const AboutMe = () => {
       </div>
 
       <div className="mb-1 d-flex flex-wrap justify-content-between text-muted">
-        {/* <Typist className="d-flex" startDelay={500}>
-          <h5>@Husdady</h5>
-        </Typist>
+        <TypeAnimation
+          speed={5}
+          wrapper="h5"
+          cursor={false}
+          sequence={['', 1000, '@Husdady']}
+        />
 
-        <Typist className="d-flex" startDelay={2000} avgTypingDelay={100}>
-          {renderHashTags()}
-          
-        </Typist> */}
-        <HashTags />
+        <Hashtags />
       </div>
 
       <span className="tm-profile-description">

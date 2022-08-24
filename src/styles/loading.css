@@ -20,7 +20,7 @@
   height: 25%;
   display: block;
   border-radius: 100%;
-  background-color: var(--bg-darkred);
+  background-color: var(--bs-warning);
   animation: sk-chase-dot-before 2s infinite ease-in-out both;
 }
 

@@ -12,7 +12,7 @@ export default function Loading({ style }: LoadingProps): JSX.Element {
   return (
     <div
       style={style}
-      className="w-100 h-100vh d-flex align-items-center jc-center"
+      className="w-100 h-100vh d-flex align-items-center justify-content-center"
     >
       <div className="sk-chase">{dots}</div>
     </div>

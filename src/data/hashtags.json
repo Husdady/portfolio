@@ -1,14 +1,51 @@
 [
   {
-    "name": "#Programmer",
-    "delay": 4000
+    "delay": 4000,
+    "name": {
+      "es": "#Programador",
+      "en": "#Programmer"
+    }
   },
   {
-    "name": "#WebDeveloper",
-    "delay": 2000
+    "delay": 2000,
+    "name": {
+      "es": "#DesarrolladorWeb",
+      "en": "#WebDeveloper"
+    }
   },
   {
-    "name": "#ReactDeveloper",
-    "delay": 3000
+    "delay": 3000,
+    "name": {
+      "es": "#DesarrolladorReact",
+      "en": "#ReactDeveloper"
+    }
+  },
+  {
+    "delay": 3000,
+    "name": {
+      "es": "#DesarrolladorMERN",
+      "en": "#MERNDeveloper"
+    }
+  },
+  {
+    "delay": 2000,
+    "name": {
+      "es": "#DesarrolladorNode",
+      "en": "#NodeDeveloper"
+    }
+  },
+  {
+    "delay": 4000,
+    "name": {
+      "es": "#DesarrolladorJS",
+      "en": "#JSDeveloper"
+    }
+  },
+  {
+    "delay": 1000,
+    "name": {
+      "es": "#DesarrolladorTS",
+      "en": "#TSDeveloper"
+    }
   }
 ]

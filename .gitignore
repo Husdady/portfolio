@@ -12,6 +12,7 @@
 /build
 
 # misc
+package.json
 .DS_Store
 .husky
 .env
