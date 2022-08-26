@@ -38,7 +38,12 @@ export default function Tabs() {
     return (
       <React.Fragment>
         {tabs.map((tab: TabType, i: number) => (
-          <Nav.Item key={i} onClick={() => setActiveTab(tab.name)}>
+          <Nav.Item
+            key={i}
+            as="li"
+            role="button"
+            onClick={() => setActiveTab(tab.name)}
+          >
             <Nav.Link
               eventKey={tab.name}
               className="bg-transparent py-2 px-4 rounded-0 border-0"
@@ -56,7 +61,12 @@ export default function Tabs() {
 
   return (
     <section className="tm-information bg-opacity inactive-tab">
-      <Nav variant="tabs" defaultActiveKey="skills" className="border-opacity">
+      <Nav
+        as="ul"
+        variant="tabs"
+        defaultActiveKey="skills"
+        className="border-opacity"
+      >
         <TabList />
       </Nav>
 
