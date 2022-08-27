@@ -49,9 +49,9 @@ const renderProyects = (proyects: ProyectType[]) => {
   const mq: boolean = window.innerWidth <= 600
 
   return proyects.map((proyect: ProyectType) => (
-    <Col key={proyect.id} className="proyect px-2">
+    <Col key={proyect.id} as="article" className="proyect px-2">
       {/* Proyect Image */}
-      <section className="proyect-img position-relative w-100">
+      <figure className="proyect-img position-relative w-100 mb-0">
         <div className="position-absolute top-0 start-0 bottom-0 end-0 wrap" />
         {renderProyectUrl(proyect)}
 
@@ -66,16 +66,16 @@ const renderProyects = (proyects: ProyectType[]) => {
               : styleImgForAppWeb
           }
         />
-      </section>
+      </figure>
 
       {/* Proyect Name */}
-      <section
+      <div
         style={{ borderBottom: '1px solid var(--bs-gray-700)' }}
-        className="d-flex justify-content-center text-muted pt-3 border-bottom-2 w-100 pb-2"
+        className="proyect-title d-flex justify-content-center text-muted pt-3 border-bottom-2 w-100 pb-2"
       >
         <FontAwesomeIcon icon="file" className="me-2" />
         <ProyectName value={proyect.name} />
-      </section>
+      </div>
     </Col>
   ))
 }
