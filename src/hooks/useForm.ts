@@ -10,6 +10,7 @@ import {
   UseFormReturnType,
   ExtraDataType,
   SchemaRuleType,
+  UpdateErrorLangType,
   RunValidationSubmitType,
   RunValidationSchemaRulesType
 } from '%types%/useForm.type'
@@ -226,24 +227,30 @@ export default function useForm({
   }, [])
 
   // Actualizar un error cuando el lenguaje se actualiza
-  const updateErrorLang = React.useCallback((currentLang: string) => {
-    setErrors((currentState) => {
-      const copyErrors: ErrorsType = Helper.copyObject(currentState)
-      const errorKeys = Object.keys(copyErrors)
+  const updateErrorLang = React.useCallback(
+    ({ currentLang, currentValues }: UpdateErrorLangType) => {
+      setErrors((currentState) => {
+        const copyErrors: ErrorsType = Helper.copyObject(currentState)
+        const errorKeys = Object.keys(copyErrors)
 
-      for (const errorKey of errorKeys) {
-        const schemaErrors = runValidationSchemaRules({
-          field: errorKey,
-          value: values[errorKey],
-          currentLang: currentLang
-        })
+        for (const errorKey of errorKeys) {
+          const schemaErrors = runValidationSchemaRules({
+            field: errorKey,
+            value: currentValues[errorKey],
+            currentLang: currentLang
+          })
 
-        copyErrors[errorKey] = schemaErrors[errorKey]
-      }
+          copyErrors[errorKey] = schemaErrors[errorKey]
+        }
 
-      return copyErrors
-    })
-  }, [])
+        // eslint-disable-next-line no-console
+        console.log('[copyErrors]', copyErrors)
+
+        return copyErrors
+      })
+    },
+    []
+  )
 
   // Resetear formulario
   const resetForm = React.useCallback(() => {
@@ -258,7 +265,10 @@ export default function useForm({
   }, [])
 
   useMounted(() => {
-    updateErrorLang(lang)
+    updateErrorLang({
+      currentLang: lang,
+      currentValues: values
+    })
   }, [lang])
 
   return {

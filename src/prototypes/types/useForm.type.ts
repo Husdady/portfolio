@@ -75,6 +75,11 @@ export type UseFormReturnType = LanguageType & {
   ) => (e: React.FormEvent<HTMLFormElement>) => void
 }
 
+export type UpdateErrorLangType = {
+  currentLang: string
+  currentValues: ValuesType
+}
+
 export type RunValidationSubmitType = {
   formValues: ValuesType
   schemaErrors: ErrorsType
