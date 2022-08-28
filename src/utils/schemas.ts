@@ -6,6 +6,20 @@ export const ContactFormSchema: ValidationSchemaType = {
     required: {
       es: 'Por favor ingresa tu nombre completo',
       en: 'Please enter your fullname'
+    },
+    min: {
+      limit: 3,
+      message: (limit: number) => ({
+        es: `No existen nombres que tengan menos de ${limit} carácteres`,
+        en: `There are no names that have less than ${limit} characters`
+      })
+    },
+    max: {
+      limit: 32,
+      message: (limit: number) => ({
+        es: `Ingresa un nombre que tenga como máximo ${limit} carácteres`,
+        en: `Enter a name that has at most ${limit} characters`
+      })
     }
   },
   email: {
