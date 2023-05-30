@@ -3,16 +3,12 @@
     "baseUrl": "src",
     "paths": {
       "@tests/*": ["__test__/*"],
-      "@data/*": ["data/*"],
-      "@images/*": ["images/*"],
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
       "@hooks/*": ["hooks/*"],
-      "@styles/*": ["styles/*"],
       "@services/*": ["services/*"],
-      "@utils/*": ["utils/*"],
-      "%types%/*": ["prototypes/types/*"],
-      "@interfaces/*": ["prototypes/interfaces/*"],
-      "@common": ["components/common/_exports"],
-      "@layouts/*": ["components/layouts/*"]
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"]
     }
   }
 }

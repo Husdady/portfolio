@@ -2,10 +2,10 @@
 import emailjs from '@emailjs/browser'
 
 // Types
-import SendEmailMessageType from '%types%/sendEmailMessage.type'
+// import SendEmailMessageType from '%types%/sendEmailMessage.type'
 
 // Services
-import { EMAIL_SERVICE, EMAIL_TEMPLATE, EMAIL_USER } from './credentials'
+import { EMAIL_SERVICE, EMAIL_TEMPLATE, EMAIL_USER } from '@assets/data/constants'
 
 // Enviar mensaje a mi correo personal
 export default async function sendEmailMessage({
@@ -13,7 +13,7 @@ export default async function sendEmailMessage({
   values,
   extraData,
   resetForm
-}: SendEmailMessageType) {
+}: any) {
   try {
     if (
       'showLoading' in extraData &&

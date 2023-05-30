@@ -47,9 +47,6 @@ function generateJestAliases() {
 const alias = generateAliases()
 const jestAlias = generateJestAliases()
 
-// eslint-disable-next-line no-console
-console.log('[jestAlias]', jestAlias)
-
 module.exports = {
   webpack: {
     alias: alias
