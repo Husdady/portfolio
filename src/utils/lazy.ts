@@ -16,9 +16,8 @@ export default function lazy<T extends ComponentType<any>>(
   minLoadTimeMs = 1000
 ) {
   return lazyImport(() =>
-    Promise.all([
-      factory(),
-      new Promise((resolve) => setTimeout(resolve, minLoadTimeMs))
-    ]).then(([moduleExports]) => moduleExports)
+    Promise.all([factory(), new Promise((resolve) => setTimeout(resolve, minLoadTimeMs))]).then(
+      ([moduleExports]) => moduleExports
+    )
   )
 }

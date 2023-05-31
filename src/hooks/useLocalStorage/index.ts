@@ -1,33 +1,31 @@
-// Librarys
-import React from 'react'
-
 // Hooks
-import useMounted from '@hooks/useMounted'
+import { useState, useCallback } from 'react'
 import useEventListener from '@hooks/useEventListener'
+import useMounted from '@hooks/useMounted'
 
 // Types
 import type { SetValue } from './types'
 
 // Utils
-import Helper from '@utils/Helper'
+import parseJSON from '@utils/parseJSON'
 
-export default function useLocalStorage<T>(
-  key: string,
-  initialValue: T
-): [T, SetValue<T>] {
+/**
+ * Hook for use the local storage as a useState
+ * @param {string} key Key that will save into the localStorage
+ * @param {T} initialValue Inital value of the key saved into the localStorage
+ * @returns 
+ */
+export default function useLocalStorage<T>(key: string, initialValue: T): [T, SetValue<T>] {
   // Get from local storage then
   // parse stored json or return initialValue
-  const readValue = React.useCallback((): T => {
+  const readValue = useCallback((): T => {
     // Prevent build error "window is undefined" but keep keep working
-    if (typeof window === 'undefined') {
-      return initialValue
-    }
+    if (typeof window === 'undefined') return initialValue
 
     try {
       const item = window.localStorage.getItem(key)
-      return item ? (Helper.parseJSON(item) as T) : initialValue
+      return item ? (parseJSON(item) as T) : initialValue
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.warn(`Error reading localStorage key “${key}”:`, error)
       return initialValue
     }
@@ -35,14 +33,13 @@ export default function useLocalStorage<T>(
 
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
-  const [storedValue, setStoredValue] = React.useState<T>(readValue)
+  const [storedValue, setStoredValue] = useState<T>(readValue)
 
   // Return a wrapped version of useState's setter function that ...
   // ... persists the new value to localStorage.
-  const setValue = React.useCallback((value: unknown) => {
+  const setValue = useCallback((value: unknown) => {
     // Prevent build error "window is undefined" but keeps working
     if (typeof window === 'undefined') {
-      // eslint-disable-next-line no-console
       console.warn(
         `Tried setting localStorage key "${key}" even though environment is not a client`
       )
@@ -66,19 +63,21 @@ export default function useLocalStorage<T>(
     }
   }, [])
 
-  useMounted(() => {
-    setStoredValue(readValue)
-  }, [])
-
-  const handleStorageChange = React.useCallback(
+  // Callback for change the storage
+  const handleStorageChange = useCallback(
     (event: Event) => {
       if ((event as StorageEvent)?.key && (event as StorageEvent).key !== key) {
         return
       }
+
       setStoredValue(readValue())
     },
     [key, readValue]
   )
+
+  useMounted(() => {
+    setStoredValue(readValue)
+  }, [])
 
   // this only works for other documents, not the current one
   useEventListener('storage', handleStorageChange)

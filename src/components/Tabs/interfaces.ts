@@ -16,12 +16,6 @@ export interface TabType {
   dictionaryKey: string
 }
 
-export interface SocialType {
-  name: string
-  icon: IconProp
-  accountLink: string
-}
-
 export interface SkillType {
   name: string
   level: number

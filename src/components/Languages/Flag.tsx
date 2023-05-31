@@ -1,8 +1,5 @@
 // Librarys
-import { memo, useCallback } from 'react'
-
-// Hooks
-import useLanguages from '@hooks/useLanguages'
+import { memo, useMemo } from 'react'
 
 // Interfaces
 import { FlagProps } from './interfaces'
@@ -10,12 +7,9 @@ import { FlagProps } from './interfaces'
 // Utils
 import classnames from '@utils/classnames'
 
-// JSON
-import flags from '@assets/data/flags.json'
-
 const Flag = ({ alt, url, title, language, currentLanguage, onChangeLanguage }: FlagProps) => {
   // Check if its active flag
-  const isActive = useCallback(
+  const isActive = useMemo(
     () => currentLanguage.toLowerCase() === language,
     [language, currentLanguage]
   )
@@ -30,9 +24,10 @@ const Flag = ({ alt, url, title, language, currentLanguage, onChangeLanguage }: 
         height={30}
         role="button"
         className="scale"
+        loading="lazy"
         alt={alt}
         title={title}
-        src={require('@images/' + url)}
+        src={require('@assets/images' + url)}
         onClick={() => {
           if (isActive) return false
           onChangeLanguage(language.toUpperCase())

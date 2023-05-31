@@ -1,3 +1,4 @@
+// Interfaces
 export interface AlertRef {
   show: Function
   hide: Function

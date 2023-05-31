@@ -7,7 +7,7 @@ import { library, IconPack } from '@fortawesome/fontawesome-svg-core'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 // Components
-import Loading from '@components/Loading'
+import Loading from '@components/Loading/index'
 
 // Utils
 import lazy from '@utils/lazy'
@@ -16,8 +16,8 @@ import lazy from '@utils/lazy'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '@styles/global.css'
 import '@styles/loading.css'
-import '@styles/page-not-found/index.css'
-import '@styles/profile/index.css'
+import '@styles/page-not-found.css'
+import '@styles/profile.css'
 import '@styles/tabs/contact.css'
 import '@styles/tabs/index.css'
 import '@styles/tabs/proyects.css'

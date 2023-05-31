@@ -1,4 +1,4 @@
-.btn {
+/* .btn {
   @apply py-4 px-5;
 
   &.no-active:active {
@@ -21,4 +21,4 @@
       @apply w-full h-full absolute cursor-not-allowed top-0 left-0 bottom-0 right-0;
     }
   }
-}
+} */

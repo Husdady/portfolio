@@ -14,7 +14,7 @@ import { ButtonProps } from './interfaces'
 import { ButtonProps as Props } from './constants'
 
 // Styles
-import './styles.scss'
+import './styles.css'
 
 const Button: React.FC<ButtonProps> = ({
   type = Props.DEFAULT_TYPE,

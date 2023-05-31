@@ -2,7 +2,7 @@
 import { memo } from 'react'
 
 // Components
-import MultiLangText from './MultiLangText'
+import MultiLangText from '@components/MultiLangText'
 
 // Constants
 import { style } from './constants'

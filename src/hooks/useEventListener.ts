@@ -10,9 +10,7 @@ export default function useEventListener<
   T extends HTMLElement | void = void
 >(
   eventName: KW | KH,
-  handler: (
-    event: WindowEventMap[KW] | HTMLElementEventMap[KH] | Event
-  ) => void,
+  handler: (event: WindowEventMap[KW] | HTMLElementEventMap[KH] | Event) => void,
   element?: RefObject<T>,
   options?: boolean | AddEventListenerOptions
 ) {

@@ -1,3 +1,4 @@
+// Interfaces
 export interface SkillProps {
   level: number
   height: string

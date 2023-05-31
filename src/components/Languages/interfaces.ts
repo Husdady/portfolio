@@ -1,3 +1,4 @@
+// Interfaces
 export interface FlagType {
   id: string
   country: string
@@ -13,11 +14,4 @@ export interface FlagProps {
   language: string
   currentLanguage: string
   onChangeLanguage: (language: string) => void
-}
-
-export interface LanguageType {
-  language: string
-  dictionary: {
-    [key: string]: string
-  }
 }

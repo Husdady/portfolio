@@ -4,6 +4,8 @@
     "es2021": true
   },
   "extends": [
+    "react-app",
+    "react-app/jest",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "standard",
@@ -17,12 +19,7 @@
       "jsx": true
     }
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-    "@typescript-eslint",
-    "eslint-plugin-prettier"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "eslint-plugin-prettier"],
   "rules": {
     "no-console": "warn",
     "react/display-name": "off",

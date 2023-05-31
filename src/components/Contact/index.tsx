@@ -1,67 +1,51 @@
 // React
-import React from 'react'
+import React, { Suspense } from 'react'
 
 // Components
 import { Alert, renderError, Button } from '@common'
-import MultiLangText from '@layouts/common/MultiLangText'
+import MultiLangText from '@components/MultiLangText'
 
 // Librarys
-import { Container, Badge } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Container } from 'react-bootstrap'
 
 // Hooks
 import useForm from '@hooks/useForm'
-import useLanguages from '@hooks/useLanguages'
 
 // Services
 import sendEmailMessage from '@services/sendEmailMessage'
-import { CV_LINK_ES, CV_LINK_EN } from '@services/credentials'
 
 // Interfaces
 import { AlertRef } from '@interfaces/Alert.interface'
-import { SocialType } from '@interfaces/Tabs.interface'
 import { LoadingActions } from '@interfaces/Button.interface'
 
 // Types
 import { FormDataType } from '%types%/useForm.type'
 
 // Utils
-import { ContactFormSchema } from 'assets/data/contact-form-schema'
+import ContactFormSchema from '@assets/data/contact-form-schema'
+import lazy from '@utils/lazy'
+
+// Lazy components
+const DownloadCV = lazy(() => import('@components/Contact/DownloadCV'))
+const SocialNetworks = lazy(() => import('@components/Contact/SocialNetworks'))
 
 const buttonStyle: React.CSSProperties = { padding: '10px 30px' }
 const loadingStyle = {
   style: { marginLeft: 40, marginRight: 40 }
 }
 
-const allSocialNetworks: SocialType[] = require('@data/all-social-networks.json')
-
-const mySocialNetworks: React.ReactNode[] = allSocialNetworks.map(
-  (social: SocialType, i: number) => (
-    <Badge key={i} className="social rounded-0 m-1 fw-normal">
-      <a
-        rel="noreferrer"
-        target="_blank"
-        className="text-white"
-        href={social.accountLink}
-      >
-        <FontAwesomeIcon icon={social.icon} className="me-2" />
-        <span>{social.name}</span>
-      </a>
-    </Badge>
-  )
-)
-
 export default function Contact() {
   return (
     <React.Fragment>
-      {/* Formulario de contacto */}
       <ContactForm />
 
-      {/* Redes sociales */}
-      <SocialNetworks />
+      <Suspense fallback={null}>
+        <SocialNetworks />
+      </Suspense>
 
-      {/* Descargar CV */}
-      <DownloadCV />
+      <Suspense fallback={null}>
+        <DownloadCV />
+      </Suspense>
     </React.Fragment>
   )
 }
@@ -72,24 +56,23 @@ export const ContactForm = () => {
   const refSuccessAlert = React.useRef<AlertRef | null>(null)
   const refSubmitButton = React.useRef<LoadingActions | null>(null)
 
-  const { values, setFieldValue, errors, handleSubmit, language, dictionary } =
-    useForm({
-      validationSchema: ContactFormSchema,
-      initialValues: {
-        name: '',
-        email: '',
-        message: ''
-      },
-      onSubmit: (formData: FormDataType) => {
-        return sendEmailMessage({
-          ...formData,
-          refs: {
-            successAlert: refSuccessAlert,
-            dangerAlert: refDangerAlert
-          }
-        })
-      }
-    })
+  const { values, setFieldValue, errors, handleSubmit, language, dictionary } = useForm({
+    validationSchema: ContactFormSchema,
+    initialValues: {
+      name: '',
+      email: '',
+      message: ''
+    },
+    onSubmit: (formData: FormDataType) => {
+      return sendEmailMessage({
+        ...formData,
+        refs: {
+          successAlert: refSuccessAlert,
+          dangerAlert: refDangerAlert
+        }
+      })
+    }
+  })
 
   const refAction = React.useCallback((action: string) => {
     if (refSubmitButton.current !== null) {
@@ -178,53 +161,6 @@ export const ContactForm = () => {
         className="mt-4"
         title={dictionary['contact-kkk995']}
       />
-    </Container>
-  )
-}
-
-export const SocialNetworks = () => {
-  return (
-    <Container fluid as="section" className="mt-2 mb-4 px-0 px-md-3 px-lg-3">
-      <h2 className="text-danger">
-        <MultiLangText dictionaryKey="contact-f618is" />:
-      </h2>
-      <div className="all-social-networks mt-3 text-center">
-        {mySocialNetworks}
-      </div>
-    </Container>
-  )
-}
-
-export const CVLink = () => {
-  const { lang } = useLanguages()
-  const isESLang = lang === 'es'
-
-  return (
-    <a
-      target="_blank"
-      href={isESLang ? CV_LINK_ES : CV_LINK_EN}
-      rel="noreferrer"
-    >
-      <Button
-        icon="file-download"
-        title={<MultiLangText dictionaryKey="contact-as0125" />}
-        className="px-4 rounded bg-danger text-white h-100"
-      />
-    </a>
-  )
-}
-
-export const DownloadCV = () => {
-  return (
-    <Container
-      fluid
-      as="section"
-      className="d-flex justify-content-between px-0 px-md-3 px-lg-3"
-    >
-      <h2 className="text-danger">
-        <MultiLangText dictionaryKey="contact-yc712t" />:
-      </h2>
-      <CVLink />
     </Container>
   )
 }

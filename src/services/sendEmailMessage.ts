@@ -8,17 +8,9 @@ import emailjs from '@emailjs/browser'
 import { EMAIL_SERVICE, EMAIL_TEMPLATE, EMAIL_USER } from '@assets/data/constants'
 
 // Enviar mensaje a mi correo personal
-export default async function sendEmailMessage({
-  refs,
-  values,
-  extraData,
-  resetForm
-}: any) {
+export default async function sendEmailMessage({ refs, values, extraData, resetForm }: any) {
   try {
-    if (
-      'showLoading' in extraData &&
-      typeof extraData.showLoading === 'function'
-    ) {
+    if ('showLoading' in extraData && typeof extraData.showLoading === 'function') {
       extraData.showLoading() // Mostrar loading en el botón "Send message"
     }
 
@@ -55,10 +47,7 @@ export default async function sendEmailMessage({
   }
 
   // Ocultar loading en el botón "Send message"
-  if (
-    'showLoading' in extraData &&
-    typeof extraData.hideLoading === 'function'
-  ) {
+  if ('showLoading' in extraData && typeof extraData.hideLoading === 'function') {
     extraData.hideLoading()
   }
 }

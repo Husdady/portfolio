@@ -1,23 +1,20 @@
 // Components
 import { Button } from '@common'
-import MultiLangText from '@layouts/common/MultiLangText'
+import MultiLangText from '@components/MultiLangText'
 
 // Librarys
 import { Row, Col, Image, Container } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-// Interfaces
-import {
-  ProyectType,
-  ProyectsTabProps,
-  ProyectNameProps
-} from '@interfaces/Tabs.interface'
-
-// JSON
+// Hooks
 import useLanguages from '@hooks/useLanguages'
 
-const allMainProyects: ProyectType[] = require('@data/all-main-proyects.json')
-const allPersonalProyects: ProyectType[] = require('@data/all-personal-proyects.json')
+// Interfaces
+import { ProyectType, ProyectsTabProps } from './interfaces'
+
+// JSON
+import allMainProyects from '@assets/data/all-main-proyects.json'
+import allPersonalProyects from '@assets/data/all-personal-proyects.json'
 
 const styleImgForAppWeb: React.CSSProperties = {
   objectFit: 'cover'
@@ -60,11 +57,7 @@ const renderProyects = (proyects: ProyectType[]) => {
           src={proyect.proyectImg}
           alt={`proyect-${proyect.id}`}
           className="position-absolute top-0 start-0 bottom-0 w-100 h-100"
-          style={
-            mq || proyect.type === 'app_mobile'
-              ? styleImgForAppMobile
-              : styleImgForAppWeb
-          }
+          style={mq || proyect.type === 'app_mobile' ? styleImgForAppMobile : styleImgForAppWeb}
         />
       </figure>
 
@@ -81,7 +74,7 @@ const renderProyects = (proyects: ProyectType[]) => {
 }
 
 const mainProyects = renderProyects(allMainProyects)
-const personalProyects = renderProyects(allPersonalProyects)
+const personalProyects = renderProyects(allPersonalProyects as ProyectType[])
 
 export default function Proyects({ defaultResponsiveGrids }: ProyectsTabProps) {
   return (
@@ -90,18 +83,18 @@ export default function Proyects({ defaultResponsiveGrids }: ProyectsTabProps) {
         <MultiLangText dictionaryKey="proyects-xaks20" />
       </h2>
 
-      {/* Main proyects */}
       <h4 className="my-4 text-decoration-underline">
         <MultiLangText dictionaryKey="proyects-f618is" />:
       </h4>
+
       <Row as="section" className="proyects" {...defaultResponsiveGrids}>
         {mainProyects}
       </Row>
 
-      {/* Personal proyects */}
       <h4 className="my-4 text-decoration-underline">
         <MultiLangText dictionaryKey="proyects-yc712t" />:
       </h4>
+
       <Row as="section" className="proyects" {...defaultResponsiveGrids}>
         {personalProyects}
       </Row>
@@ -118,14 +111,4 @@ Proyects.defaultProps = {
     xl: 3,
     xxl: 4
   }
-}
-
-// <------------------------ Extra Components ------------------------>
-function ProyectName({ value }: ProyectNameProps) {
-  const { lang } = useLanguages()
-
-  const proyectName =
-    typeof value === 'string' ? value : value[lang as keyof typeof value]
-
-  return <h6 className="mb-0 text-center">{proyectName}</h6>
 }

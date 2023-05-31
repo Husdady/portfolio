@@ -1,20 +1,16 @@
-// React
-import React from 'react'
-
 // Librarys
+import React from 'react'
 import { Alert } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Interfaces
-import { AlertRef, AlertProps, IconType } from '@interfaces/Alert.interface'
+import { AlertRef, AlertProps } from './interfaces'
 
-// React
-import Helper from '@utils/Helper'
+// Utils
+import classnames from '@utils/classnames'
 
-const icons: IconType = {
-  success: 'check-circle',
-  danger: 'times-circle'
-}
+// Constants
+import icons from './icons'
 
 const CustomAlert = React.forwardRef<AlertRef, AlertProps>(
   ({ title, variant, className }: AlertProps, ref) => {
@@ -25,23 +21,18 @@ const CustomAlert = React.forwardRef<AlertRef, AlertProps>(
     // Create refs for use in another component
     const handleRef = React.useCallback(() => ({ show: showAlert, hide: hideAlert }), [])
 
+    // Use imperative hook
     React.useImperativeHandle(ref, handleRef)
 
     if (!visible) return null
 
-    const alertClasses = Helper.classnames(['text-center', className])
-
     return (
-      <Alert variant={variant} className={alertClasses}>
+      <Alert variant={variant} className={classnames(['text-center', className])}>
         <div>
-          {/* ícono de la alerta */}
           <FontAwesomeIcon className="me-2" icon={icons[variant as keyof typeof icons]} />
-
-          {/* Título de la alerta */}
           <span className="title-custom-alert">{title}</span>
         </div>
 
-        {/* Ícono parar cerrar alerta */}
         <FontAwesomeIcon
           role="button"
           onClick={hideAlert}

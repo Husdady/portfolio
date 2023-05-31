@@ -10,9 +10,6 @@ import { ButtonContentProps } from './interfaces'
 // Utils
 import classnames from '@utils/classnames'
 
-// Styles
-import './styles.scss'
-
 const ButtonContent: React.FC<ButtonContentProps> = ({
   icon,
   title,
