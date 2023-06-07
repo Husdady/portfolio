@@ -1,4 +1,4 @@
-// React
+// Librarys
 import { CSSProperties } from 'react'
 
 export interface ErrorMessageProps {

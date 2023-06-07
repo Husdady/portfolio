@@ -6,15 +6,36 @@
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 20px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bs-gray-200);
+  background-color: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--bs-red);
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+  background-color: var(--bs-red);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff6170;
+}
+
+.fire-sans {
+  font-family: 'Fire Sans', sans-serif !important;
+}
+
+.catamaran {
+  font-family: 'Catamaran', sans-serif !important;
+}
+
+@media only screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 html,

@@ -1,4 +1,4 @@
-// React
+// Librarys
 import { memo, Fragment } from 'react'
 
 // Components

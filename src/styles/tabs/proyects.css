@@ -1,44 +1,103 @@
 .proyects {
-  grid-row-gap: 20px;
-  max-height: 300px;
+  grid-row-gap: 0.65rem;
   overflow-y: auto;
+}
+
+.proyects-list.loader .proyect .col {
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.16);
+  animation: fade linear 2.5s infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.proyects .proyect {
+  padding-left: 0.35rem;
+  padding-right: 0.35rem;
+}
+
+.proyects .proyect .proyect-backdrop {
+  border: 1px solid var(--bs-info);
+  border-bottom: none;
+}
+
+.proyects .proyect .proyect-title {
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--bs-info);
+  /* padding: 0.65rem 1rem; */
+  padding-top: 0.75rem;
+  padding-bottom: 0.65rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #000;
+  border: 1px solid var(--bs-info);
 }
 
 .proyects .proyect .proyect-img {
   height: 125px;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .proyects .proyect .proyect-url {
   left: 50%;
   top: 50%;
   width: 90%;
-  transform: translate(-50%, -50%);
   z-index: 999999999;
+  transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.85);
-  border: 1px solid var(--bs-green);
-  color: var(--bs-green);
+  border: 1px solid var(--bs-info);
+  color: var(--bs-info);
+}
+
+.proyects .proyect .proyect-url .button-title {
+  margin-top: 0.1rem;
 }
 
 .proyects .proyect .proyect-url:hover {
-  color: var(--bs-gray-400);
-  border: 1px solid var(--bs-gray-400);
-  background-color: var(--bs-green);
-  transition: background-color, color, ease-in-out 0.8s;
+  border: transparent;
+  color: var(--bs-black);
+  background-color: var(--bs-info);
+  transition: background-color, color, linear 0.3s;
 }
 
-@media (max-width: 1320px) {
+@media screen and (max-width: 1320px) {
   .proyects .proyect .proyect-img {
     height: 150px;
   }
 }
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .proyects {
     row-gap: 35px;
   }
 }
 
-@media (max-width: 562px) {
+@media screen and (min-width: 576px) {
+  .proyects {
+    max-height: 500px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .proyects .proyect .proyect-img {
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 562px) {
   .proyects .proyect .proyect-img {
     height: 180px;
   }

@@ -1,24 +1,26 @@
-/* .btn {
-  @apply py-4 px-5;
+.btn {
+  column-gap: 0.5rem;
+}
 
-  &.no-active:active {
-    transform: none;
-  } 
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: initial;
+}
 
-  &:active {
-    transform: scale(85%);
+.btn .spinner .animate-spin {
+  width: 0.9rem;
+  height: 0.9rem;
+  stroke-width: 30px;
+  margin-right: 0.65rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-
-  &:disabled {
-    @apply opacity-40;
-
-    &:active {
-      transform: none;
-    }
-
-    &:after {
-      content: ' ';
-      @apply w-full h-full absolute cursor-not-allowed top-0 left-0 bottom-0 right-0;
-    }
+  to {
+    transform: rotate(360deg);
   }
-} */
+}

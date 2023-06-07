@@ -7,15 +7,25 @@ import useLanguages from '@hooks/useLanguages'
 // Interfaces
 import { ProyectNameProps } from './interfaces'
 
+// Utils
+import truncate from '@utils/truncate'
+
+// Constants
+import { LIMIT_CHARACTERS_FOR_THE_PROYECT_NAME } from './constants'
+
 function ProyectName({ value }: ProyectNameProps) {
   const { lang } = useLanguages()
 
   // Define the proyect name
   const proyectName = useMemo(() => {
     return typeof value === 'string' ? value : value[lang as keyof typeof value]
-  }, [lang])
+  }, [lang, value])
 
-  return <h6 className="mb-0 text-center">{proyectName}</h6>
+  return (
+    <h6 className="mb-0 text-center">
+      {truncate(proyectName, LIMIT_CHARACTERS_FOR_THE_PROYECT_NAME)}
+    </h6>
+  )
 }
 
 export default memo(ProyectName)

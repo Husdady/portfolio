@@ -8,6 +8,7 @@
       "@hooks/*": ["hooks/*"],
       "@services/*": ["services/*"],
       "@styles/*": ["styles/*"],
+      "@custom-types/*": ["types/*"],
       "@utils/*": ["utils/*"]
     }
   }

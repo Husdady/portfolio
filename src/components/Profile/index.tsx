@@ -11,7 +11,7 @@ const HusdadyPhoto = lazy(() => import('@components/HusdadyPhoto'))
 export default function Profile() {
   return (
     <section className="tm-profile bg-opacity p-4 p-md-5 p-xl-4">
-      <Suspense fallback={null}>
+      <Suspense fallback={<div className="rounded-circle tm-profile-picture mx-auto"></div>}>
         <HusdadyPhoto />
       </Suspense>
 

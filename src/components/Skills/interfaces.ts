@@ -1,6 +1,3 @@
-// Interfaces
-export interface SkillProps {
-  level: number
-  height: string
-  barColor: string
+export interface SkillListProps {
+  skills: string[]
 }

@@ -1,16 +1,13 @@
 // Interfaces
-export interface AlertRef {
-  show: Function
-  hide: Function
+export interface IconType {
+  success: 'check-circle'
+  danger: 'times-circle'
 }
 
 export interface AlertProps {
   title?: string
   variant?: string
   className?: string
-}
-
-export interface IconType {
-  success: 'check-circle'
-  danger: 'times-circle'
+  isVisible: boolean
+  onClose: () => void
 }

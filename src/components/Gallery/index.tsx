@@ -18,7 +18,13 @@ export default function MyGalleryPhotos() {
       </h2>
 
       <section id="gallery" style={galleryStyle}>
-        <Gallery images={gallery} rowHeight={250} margin={5} backdropClosesModal />
+        <Gallery
+          margin={5}
+          rowHeight={250}
+          images={gallery}
+          enableImageSelection
+          backdropClosesModal
+        />
       </section>
     </div>
   )

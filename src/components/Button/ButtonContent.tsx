@@ -21,8 +21,8 @@ const ButtonContent: React.FC<ButtonContentProps> = ({
 }: ButtonContentProps) => {
   // Define title classes
   const titleClasses = React.useMemo(() => {
-    return classnames([titleClassName, 'text-inherit font-poppins leading-tight'])
-  }, [])
+    return classnames([titleClassName, 'button-title text-inherit catamaran leading-tight'])
+  }, [titleClassName])
 
   // Show spin when is fetching to some API
   if (loading === true) {
@@ -33,7 +33,7 @@ const ButtonContent: React.FC<ButtonContentProps> = ({
     <React.Fragment>
       {icon}
 
-      {title.length > 0 && (
+      {title && (
         <span style={titleStyle} className={titleClasses}>
           {title}
         </span>

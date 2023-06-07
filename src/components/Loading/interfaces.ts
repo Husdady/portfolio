@@ -1,4 +1,4 @@
-// React
+// Librarys
 import React from 'react'
 
 export interface LoadingProps {

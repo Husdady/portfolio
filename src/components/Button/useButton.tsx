@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // Librarys
 import React from 'react'
 
@@ -22,7 +23,7 @@ export default function useButton({
     () =>
       classnames([
         className,
-        'btn rounded overflow-hidden relative outline-none flex flex-wrap items-center justify-center gap-x-2 gap-y-1 dark:bg-gray-800'
+        'btn rounded overflow-hidden position-relative outline-none d-flex flex-wrap align-items-center justify-content-center'
       ]),
     [className]
   )

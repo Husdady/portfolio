@@ -20,7 +20,7 @@ export default function PageNotFound() {
   }, [history])
 
   return (
-    <div className="tm-page404 container text-white text-center">
+    <div className="tm-page404 container text-white text-center catamaran">
       <Image src={img} fluid style={imgStyle} alt="sad-cat" />
 
       <h1>404</h1>

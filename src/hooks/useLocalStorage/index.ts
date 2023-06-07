@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-console */
 // Hooks
 import { useState, useCallback } from 'react'
 import useEventListener from '@hooks/useEventListener'
@@ -13,7 +15,7 @@ import parseJSON from '@utils/parseJSON'
  * Hook for use the local storage as a useState
  * @param {string} key Key that will save into the localStorage
  * @param {T} initialValue Inital value of the key saved into the localStorage
- * @returns 
+ * @returns
  */
 export default function useLocalStorage<T>(key: string, initialValue: T): [T, SetValue<T>] {
   // Get from local storage then

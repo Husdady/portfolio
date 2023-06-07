@@ -1,8 +1,10 @@
 .tm-information {
-  width: 68%;
+  width: 68.85%;
 }
 
 .tm-information h2,
+.tm-information h4,
+.tm-information h5,
 .tm-information h6 {
   font-family: 'Catamaran', sans-serif;
 }

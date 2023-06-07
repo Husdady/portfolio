@@ -3,7 +3,7 @@
     "language": "es",
     "dictionary": {
       "profile-dajs10": "Hola",
-      "profile-pa34sj": "Soy Desarrollador Frontend, comencé a desarrollar aplicaciones",
+      "profile-pa34sj": "Soy Desarrollador Fullstack, comencé a desarrollar aplicaciones",
       "profile-ald12s": "desde hace 3 años, mi habilidad principal es Javascript",
       "profile-ansoc9": "mi interés por el mundo de la programación empezó cuando aprendí HTML a través del curso impartido por Google:",
       "profile-xmaks8": "Desarrollo Web I",
@@ -18,11 +18,13 @@
       "skills-xaks20": "Mis habilidades como Desarrollador",
       "skills-f618is": "Tecnologías principales",
       "skills-yc712t": "Tecnologías básicas",
+      "skills-yc712h": "Programas usados",
+      "skills-yc712z": "Metodologías usadas",
       "proyects-xaks20": "Proyectos que he realizado como desarrollador",
       "proyects-f618is": "Proyectos principales",
       "proyects-yc712t": "Proyectos personales",
       "proyects-xbas16": "Ver proyecto",
-      "gallery-xaks20": "Galeria de fotos sobre mí",
+      "gallery-xaks20": "Galeria de fotos sobre mí y mis mascotas",
       "contact-xaks20": "¿Deseas contactarme?",
       "contact-kkk999": "Nombre completo",
       "contact-kkk998": "Correo electrónico",
@@ -30,17 +32,18 @@
       "contact-kkk996": "Tu mensaje fue enviado exitosamente a mi correo personal",
       "contact-kkk995": "Hubo un error al enviar su mensaje a mi correo personal",
       "contact-cnahs7": "Enviar mensaje",
+      "contact-jjj999": "Enviando mensaje...",
       "contact-f618is": "Mis redes sociales",
       "contact-yc712t": "Descargar CV",
       "contact-as0125": "Descargar curriculum",
-      "footer-d9s02": "Desarrollador Frontend"
+      "footer-d9s02": "Desarrollador Fullstack"
     }
   },
   {
     "language": "en",
     "dictionary": {
       "profile-dajs10": "Hi there",
-      "profile-pa34sj": "I am Frontend Developer, I started developing applications",
+      "profile-pa34sj": "I am Fullstack Developer, I started developing applications",
       "profile-ald12s": "3 years ago, my main skill is Javascript",
       "profile-ansoc9": "my interest in the world of development began when i learned HTML through the course given by Google:",
       "profile-xmaks8": "Web Development I",
@@ -55,11 +58,13 @@
       "skills-xaks20": "My skills as a developer",
       "skills-f618is": "Main Technologies",
       "skills-yc712t": "Basic Technologies",
+      "skills-yc712h": "Used Programs",
+      "skills-yc712z": "Used Methodologies",
       "proyects-xaks20": "Projects I have done as a developer",
       "proyects-f618is": "Main Proyects",
       "proyects-yc712t": "Personal Proyects",
       "proyects-xbas16": "See proyect",
-      "gallery-xaks20": "Photo Gallery about me",
+      "gallery-xaks20": "Photo Gallery about me and my pets",
       "contact-xaks20": "Do you want to contact me?",
       "contact-kkk999": "Fullname",
       "contact-kkk998": "Email",
@@ -67,10 +72,11 @@
       "contact-kkk996": "Your message was successfully sent to my personal email",
       "contact-kkk995": "There was an error sending your message to my personal email",
       "contact-cnahs7": "Send message",
+      "contact-jjj999": "Sending message...",
       "contact-f618is": "My social networks",
       "contact-yc712t": "Download CV",
       "contact-as0125": "Download curriculum",
-      "footer-d9s02": "Frontend Developer"
+      "footer-d9s02": "Fullstack Developer"
     }
   }
 ]

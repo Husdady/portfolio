@@ -10,6 +10,9 @@ import Proyects from '@components/Proyects'
 // Interfaces
 import { PageTabsType } from './interfaces'
 
+// Constants
+import { SKILLS_TAB } from './constants'
+
 const pageTabs: PageTabsType = {
   skills: <Skills />,
   proyects: <Proyects />,
@@ -21,7 +24,7 @@ const pageTabs: PageTabsType = {
  * Hook for implements the logic in the Tabs component
  */
 export default function useTabs() {
-  const [activeTab, setActiveTab] = React.useState<string>('skills')
+  const [activeTab, setActiveTab] = React.useState<string>(SKILLS_TAB)
 
   // Get current tab
   const currentTab: React.ReactNode = React.useMemo(() => {

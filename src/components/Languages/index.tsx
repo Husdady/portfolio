@@ -16,6 +16,8 @@ import flags from '@assets/data/flags.json'
 // Lazy components
 const Flag = lazy(() => import('./Flag'))
 
+export const fallbackStyle = { height: '30px' }
+
 export default function Languages() {
   const { lang, setLang } = useLanguages()
 
@@ -24,7 +26,7 @@ export default function Languages() {
       <ul className="d-flex justify-content-center mt-2 mb-0 p-0">
         {flags.map((flag: FlagType) => {
           return (
-            <Suspense key={flag.id} fallback={null}>
+            <Suspense key={flag.id} fallback={<div style={fallbackStyle}></div>}>
               <Flag
                 url={flag.imgSrc}
                 alt={flag.imgAlt}

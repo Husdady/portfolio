@@ -9,6 +9,9 @@ import MultiLangText from '@components/MultiLangText'
 // Utils
 import lazy from '@utils/lazy'
 
+// Data
+import { fallbackStyle } from '@components/Languages'
+
 // Lazy components
 const Hashtags = lazy(() => import('./Hashtags'))
 const Languages = lazy(() => import('@components/Languages'))
@@ -16,7 +19,7 @@ const Languages = lazy(() => import('@components/Languages'))
 function AboutMe() {
   return (
     <>
-      <Suspense fallback={null}>
+      <Suspense fallback={<div style={fallbackStyle}></div>}>
         <Languages />
       </Suspense>
 

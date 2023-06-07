@@ -1,7 +1,11 @@
 .tm-profile {
   width: 30%;
   color: var(--tm-text);
-  height: 100%;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  font-family: 'Fire Sans', sans-serif;
 }
 
 .tm-profile a {
@@ -15,7 +19,7 @@
 .tm-profile-picture {
   width: 200px;
   height: 200px;
-  border: 4px solid var(--bs-gray-800);
+  border: 4px solid var(--bs-gray-600);
 }
 
 .tm-profile-title {

@@ -2,14 +2,10 @@
 import React from 'react'
 
 // Types
-import type { ButtonType } from '@config/global-types'
+import type { ButtonType } from '@custom-types/global-types'
 
 // Interfaces
-import {
-  TitleProp,
-  OnlyStyleProp,
-  OnlyClassNameProp
-} from '@config/global-interfaces'
+import { TitleProp, OnlyStyleProp, OnlyClassNameProp } from '@custom-types/global-interfaces'
 
 export interface SpinProps extends OnlyStyleProp, OnlyClassNameProp {
   title?: string
@@ -18,13 +14,6 @@ export interface SpinProps extends OnlyStyleProp, OnlyClassNameProp {
   size?: 'w-2' | 'w-4' | 'w-6' | 'w-8'
   customSvg?: OnlyStyleProp & OnlyClassNameProp
   customTitle?: OnlyStyleProp & OnlyClassNameProp
-}
-
-export interface ButtonContentProps
-  extends Pick<ButtonProps, 'icon' | 'title' | 'loadingTitle' | 'customSpin'> {
-  loading?: boolean
-  titleClassName?: string
-  titleStyle?: React.CSSProperties
 }
 
 export interface ButtonProps
@@ -43,4 +32,11 @@ export interface ButtonProps
   type?: 'button' | 'reset' | 'submit'
   onDoubleClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
   depsForDoubleClick?: React.DependencyList
+}
+
+export interface ButtonContentProps
+  extends Pick<ButtonProps, 'icon' | 'title' | 'loadingTitle' | 'customSpin'> {
+  loading?: boolean
+  titleClassName?: string
+  titleStyle?: React.CSSProperties
 }

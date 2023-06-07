@@ -1,4 +1,4 @@
-// React
+// Librarys
 import App from '../App'
 
 // Librarys
@@ -11,8 +11,7 @@ test('Render App Loading', () => {
   const tag = component.container.getElementsByTagName('main')
   const classNames = {
     main: 'tm-container d-flex flex-wrap justify-content-between  pt-md-3 pt-xl-5 pb-md-3 px-xl-5 px-lg-3 px-md-2',
-    loadingContainer:
-      'w-100 h-100vh d-flex align-items-center justify-content-center',
+    loadingContainer: 'w-100 h-100vh d-flex align-items-center justify-content-center',
     skChase: 'sk-chase',
     dot: 'sk-chase-dot'
   }

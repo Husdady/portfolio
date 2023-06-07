@@ -14,8 +14,12 @@ export interface ProyectNameProps {
   value: string | MultiLangType
 }
 
-export interface ProyectsTabProps {
-  defaultResponsiveGrids: Grids
+export interface ProyectsProps {
+  defaultResponsiveGrids?: Grids
+}
+
+export interface ProyectLinkProps {
+  url?: string
 }
 
 export interface ProyectType {
@@ -24,4 +28,9 @@ export interface ProyectType {
   type?: string
   proyectImg: string
   name: string | MultiLangType
+}
+
+export interface ProyectsListProps {
+  grids?: Grids
+  proyects: ProyectType[]
 }

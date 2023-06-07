@@ -1,4 +1,4 @@
-// React
+// Librarys
 import ReactDOM from 'react-dom'
 
 // Components

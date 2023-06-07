@@ -27,7 +27,7 @@ const Flag = ({ alt, url, title, language, currentLanguage, onChangeLanguage }: 
         loading="lazy"
         alt={alt}
         title={title}
-        src={require('@assets/images' + url)}
+        src={require('@assets/images/' + url)}
         onClick={() => {
           if (isActive) return false
           onChangeLanguage(language.toUpperCase())

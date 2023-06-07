@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // Hooks
 import { useMemo } from 'react'
 
@@ -29,8 +30,8 @@ export default function useSpin({
       className: classnames([
         className,
         center ? 'justify-center' : null,
-        align === 'vertical' ? 'flex-col' : null,
-        'spinner flex items-center gap-x-3'
+        align === 'vertical' ? 'flex-direction-column' : null,
+        'spinner d-flex align-items-center gap-x-3'
       ]),
 
       // Svg component
@@ -42,10 +43,7 @@ export default function useSpin({
       // Title of the component
       title: {
         style: customTitle?.style,
-        className: classnames([
-          customTitle?.className,
-          'text-inherit font-poppins leading-[1.3075]'
-        ])
+        className: classnames([customTitle?.className, 'text-inherit catamaran'])
       }
     }),
     []

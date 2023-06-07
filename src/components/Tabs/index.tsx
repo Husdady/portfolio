@@ -8,11 +8,14 @@ import useTabs from './useTabs'
 // Utils
 import lazy from '@utils/lazy'
 
+// Constants
+import { PROYECTS_TAB } from './constants'
+
 // Lazy components
 const TabsList = lazy(() => import('./TabsList'))
 
 export default function Tabs() {
-  const { currentTab, setActiveTab } = useTabs()
+  const { activeTab, currentTab, setActiveTab } = useTabs()
 
   return (
     <section className="tm-information bg-opacity inactive-tab">
@@ -22,7 +25,9 @@ export default function Tabs() {
         </Suspense>
       </Nav>
 
-      <section className="px-3 pt-4 pb-3 pb-xl-5">{currentTab}</section>
+      <section className={activeTab !== PROYECTS_TAB ? 'px-3 pt-4 pb-3' : undefined}>
+        {currentTab}
+      </section>
     </section>
   )
 }

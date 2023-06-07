@@ -1,4 +1,4 @@
-// React
+// Librarys
 import { memo } from 'react'
 
 // Components
@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { SocialType } from './interfaces'
 
 // JSON
-import allSocialNetworks from '@assets/data/all-social-networks.json'
+import socialNetworks from '@assets/data/social-networks.json'
 
 function SocialNetworks() {
   return (
@@ -22,9 +22,14 @@ function SocialNetworks() {
       </h2>
 
       <div className="all-social-networks mt-3 text-center">
-        {(allSocialNetworks as SocialType[]).map((social: SocialType, i: number) => (
+        {(socialNetworks as SocialType[]).map((social: SocialType, i: number) => (
           <Badge key={i} className="social rounded-0 m-1 fw-normal">
-            <a rel="noreferrer" target="_blank" className="text-white" href={social.accountLink}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              className="text-white catamaran text-decoration-none"
+              href={social.accountLink}
+            >
               <FontAwesomeIcon icon={social.icon} className="me-2" />
               <span>{social.name}</span>
             </a>

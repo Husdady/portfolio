@@ -1,114 +1,67 @@
+// Librarys
+import React from 'react'
+
 // Components
-import { Button } from '@common'
+import Separator from './Separator'
+import ProyectsLoader from './ProyectsLoader'
 import MultiLangText from '@components/MultiLangText'
 
-// Librarys
-import { Row, Col, Image, Container } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-// Hooks
-import useLanguages from '@hooks/useLanguages'
-
 // Interfaces
-import { ProyectType, ProyectsTabProps } from './interfaces'
+import { ProyectsProps } from './interfaces'
 
-// JSON
-import allMainProyects from '@assets/data/all-main-proyects.json'
-import allPersonalProyects from '@assets/data/all-personal-proyects.json'
+// Utils
+import lazy from '@utils/lazy'
 
-const styleImgForAppWeb: React.CSSProperties = {
-  objectFit: 'cover'
-}
+// Constants
+import { Props } from './constants'
 
-const styleImgForAppMobile: React.CSSProperties = {
-  objectFit: 'contain'
-}
+// Data
+import mainProyects from '@assets/data/main-proyects.json'
+import personalProyects from '@assets/data/personal-proyects.json'
 
-// Renderizar url de un producto
-const renderProyectUrl = (proyect: ProyectType) => {
-  if (!proyect.url) return null
+// Lazy components
+const ProyectsList = lazy(() => import('./ProyectsList'))
 
-  function goToProyect() {
-    return window.open(proyect.url, '_blank')
-  }
-
+export default function Proyects({
+  defaultResponsiveGrids = Props.defaultResponsiveGrids
+}: ProyectsProps) {
   return (
-    <Button
-      icon="globe"
-      title={<MultiLangText dictionaryKey="proyects-xbas16" />}
-      className="proyect-url position-absolute rounded py-2 text-center text-decoration-none"
-      onClick={goToProyect}
-    />
-  )
-}
+    <React.Fragment>
+      <div className="px-4 pt-4 pb-3">
+        <h2 className="text-danger">
+          <MultiLangText dictionaryKey="proyects-xaks20" />
+        </h2>
 
-const renderProyects = (proyects: ProyectType[]) => {
-  const mq: boolean = window.innerWidth <= 600
+        <h4 className="mt-4 text-info">
+          <MultiLangText dictionaryKey="proyects-f618is" />:
+        </h4>
 
-  return proyects.map((proyect: ProyectType) => (
-    <Col key={proyect.id} as="article" className="proyect px-2">
-      {/* Proyect Image */}
-      <figure className="proyect-img position-relative w-100 mb-0">
-        <div className="position-absolute top-0 start-0 bottom-0 end-0 wrap" />
-        {renderProyectUrl(proyect)}
+        <React.Suspense fallback={null}>
+          <Separator height="2px" color="var(--bs-info)" withoutMarginTop />
+        </React.Suspense>
 
-        <Image
-          fluid
-          src={proyect.proyectImg}
-          alt={`proyect-${proyect.id}`}
-          className="position-absolute top-0 start-0 bottom-0 w-100 h-100"
-          style={mq || proyect.type === 'app_mobile' ? styleImgForAppMobile : styleImgForAppWeb}
-        />
-      </figure>
-
-      {/* Proyect Name */}
-      <div
-        style={{ borderBottom: '1px solid var(--bs-gray-700)' }}
-        className="proyect-title d-flex justify-content-center text-muted pt-3 border-bottom-2 w-100 pb-2"
-      >
-        <FontAwesomeIcon icon="file" className="me-2" />
-        <ProyectName value={proyect.name} />
+        <React.Suspense fallback={<ProyectsLoader />}>
+          <ProyectsList proyects={mainProyects} grids={defaultResponsiveGrids} />
+        </React.Suspense>
       </div>
-    </Col>
-  ))
-}
 
-const mainProyects = renderProyects(allMainProyects)
-const personalProyects = renderProyects(allPersonalProyects as ProyectType[])
+      <React.Suspense fallback={null}>
+        <Separator />
+      </React.Suspense>
 
-export default function Proyects({ defaultResponsiveGrids }: ProyectsTabProps) {
-  return (
-    <Container fluid className="text-white-50" as="article">
-      <h2 className="text-danger">
-        <MultiLangText dictionaryKey="proyects-xaks20" />
-      </h2>
+      <div className="px-4 pb-4">
+        <h4 className="text-info">
+          <MultiLangText dictionaryKey="proyects-yc712t" />:
+        </h4>
 
-      <h4 className="my-4 text-decoration-underline">
-        <MultiLangText dictionaryKey="proyects-f618is" />:
-      </h4>
+        <React.Suspense fallback={null}>
+          <Separator height="2px" color="var(--bs-info)" withoutMarginTop />
+        </React.Suspense>
 
-      <Row as="section" className="proyects" {...defaultResponsiveGrids}>
-        {mainProyects}
-      </Row>
-
-      <h4 className="my-4 text-decoration-underline">
-        <MultiLangText dictionaryKey="proyects-yc712t" />:
-      </h4>
-
-      <Row as="section" className="proyects" {...defaultResponsiveGrids}>
-        {personalProyects}
-      </Row>
-    </Container>
+        <React.Suspense fallback={<ProyectsLoader />}>
+          <ProyectsList proyects={personalProyects} grids={defaultResponsiveGrids} />
+        </React.Suspense>
+      </div>
+    </React.Fragment>
   )
-}
-
-Proyects.defaultProps = {
-  defaultResponsiveGrids: {
-    xs: 1,
-    sm: 2,
-    md: 2,
-    lg: 3,
-    xl: 3,
-    xxl: 4
-  }
 }

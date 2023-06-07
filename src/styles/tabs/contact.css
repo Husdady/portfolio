@@ -1,11 +1,22 @@
 .tm-form .form-control {
+  color: #ffffff;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid #475569;
+  background-color: #1e293b;
 }
 
 .tm-form .form-control:focus {
-  box-shadow: 0 0 4.5px 2px var(--bs-danger);
+  border-color: #7dd3fc;
+}
+
+.download-cv,
+.send-message {
+  column-gap: 0.75rem !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .tm-form textarea {
@@ -17,10 +28,6 @@
   border-radius: 20px !important;
   font-family: 'Lato', sans-serif;
   font-size: 0.9em;
-}
-
-.all-social-networks .social > a {
-  text-decoration: none;
 }
 
 .all-social-networks .social:hover {
@@ -39,7 +46,7 @@
 .all-social-networks .social:nth-of-type(3),
 .all-social-networks .social:nth-of-type(4) {
   background-color: #171515;
-  border: 1px solid #dddddd;
+  border: 1px solid #7a7a7a;
 }
 
 @media (max-width: 768px) {

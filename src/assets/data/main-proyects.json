@@ -2,13 +2,13 @@
   {
     "id": "jy5w23",
     "name": "Emprendimiento y Salud",
-    "proyectImg": "https://i.imgur.com/JnwYYjV.png",
+    "proyectImg": "https://i.imgur.com/IiweRih.png",
     "url": "https://emprendimientoysalud.com"
   },
   {
     "id": "z2lk90",
     "name": "CMS - Emprendimiento y Salud",
-    "proyectImg": "https://i.imgur.com/1ks4DUR.png",
+    "proyectImg": "https://i.imgur.com/kLDv1Xc.png",
     "url": "https://app-emprendimiento-y-salud.herokuapp.com"
   },
   {
@@ -16,6 +16,35 @@
     "name": "Nutrición y Salud Personal",
     "proyectImg": "https://i.imgur.com/KuUOjuZ.png",
     "url": "https://nutricionysaludpersonal.blogspot.com"
+  },
+  {
+    "id": "kd082c",
+    "name": "Abogado Digital",
+    "proyectImg": "https://i.imgur.com/YlQj9Qu.png",
+    "url": "https://abogado-digital.onrender.com"
+  },
+  {
+    "id": "kd082d",
+    "name": "ERP Standard",
+    "proyectImg": "https://i.imgur.com/qJdcNCv.png",
+    "url": "https://desarrollador.datecloud.pe"
+  },
+  {
+    "id": "kd083d",
+    "name": "Pinch Pro Jobs",
+    "proyectImg": "https://i.imgur.com/GRHnTmg.png",
+    "url": "https://dev6345.editorx.io/react-test"
+  },
+  {
+    "id": "ba8k0s",
+    "name": "Pokemon Mistery Dungeon",
+    "proyectImg": "https://i.imgur.com/ZWblZ2o.png",
+    "url": "http://pokemon-mistery-dungeon.netlify.app"
+  },
+  {
+    "id": "sah816",
+    "name": "Pathpoint",
+    "proyectImg": "https://i.imgur.com/uWzFGi5.png"
   },
   {
     "id": "de5v82",
@@ -42,17 +71,6 @@
     "url": "https://husdady.github.io/movie-awards-ballot"
   },
   {
-    "id": "ba8k0s",
-    "name": "Pokemon Mistery Dungeon",
-    "proyectImg": "https://i.imgur.com/ZWblZ2o.png",
-    "url": "http://pokemon-mistery-dungeon.netlify.app"
-  },
-  {
-    "id": "sah816",
-    "name": "Pathpoint",
-    "proyectImg": "https://i.imgur.com/uWzFGi5.png"
-  },
-  {
     "id": "klp196",
     "name": "Selenium IDE Tests",
     "proyectImg": "https://i.imgur.com/jzUwgJS.png"
@@ -68,11 +86,5 @@
     "name": "API Whatsapp",
     "proyectImg": "https://i.imgur.com/RXoO10D.png",
     "url": "https://sharedapis.com"
-  },
-  {
-    "id": "kd082x",
-    "name": "Services TODO List",
-    "proyectImg": "https://i.imgur.com/Cdbz0Zg.png",
-    "url": "https://services-todo-list.vercel.app"
   }
 ]

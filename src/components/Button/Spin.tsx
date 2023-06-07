@@ -28,7 +28,7 @@ export default function Spin({
 
   return (
     <div role="status" style={style} className={spinSettings.className}>
-      <svg {...spinSettings.svg} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <svg {...spinSettings.svg} fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <circle cx="4" cy="4" r="10" stroke="currentColor" className="opacity-25"></circle>
         <path
           fill="currentColor"

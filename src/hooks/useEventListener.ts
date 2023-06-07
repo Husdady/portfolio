@@ -1,4 +1,4 @@
-// React
+// Librarys
 import { RefObject, useEffect, useRef } from 'react'
 
 // Hooks

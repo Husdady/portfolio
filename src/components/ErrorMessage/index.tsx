@@ -1,30 +1,41 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // Librarys
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Interfaces
-import { ErrorMessageProps } from '@interfaces/ErrorMessage.interface'
+import { ErrorMessageProps } from './interfaces'
+
+// Utils
+import classnames from '@utils/classnames'
 
 // Constants
 import { Props } from './constants'
 
 const ErrorMessage: React.FC<ErrorMessageProps> = ({
   color = Props.COLOR,
-  containerClassName = Props.CONTAINER_CLASSNAME,
+  containerClassName,
   title,
   containerStyle
 }: ErrorMessageProps) => {
+  // Define styles for the error title
+  const errorTitleStyles = React.useMemo<React.CSSProperties>(() => {
+    return { color: color, marginLeft: '0.32rem' }
+  }, [color])
+
+  // Validate title
+  if (typeof title !== 'string') return null
+  if (title.length === 0) return null
+
   return (
-    <div style={containerStyle} className={containerClassName}>
-      <FontAwesomeIcon color={color} className="me-1" icon="exclamation-circle" />
-      <small style={{ color: color }}>{title}</small>
+    <div
+      style={containerStyle}
+      className={classnames([Props.CONTAINER_CLASSNAME, containerClassName])}
+    >
+      <FontAwesomeIcon color={color} size="sm" icon="exclamation-circle" />
+      <small style={errorTitleStyles}>{title}</small>
     </div>
   )
 }
 
 export default React.memo(ErrorMessage)
-
-export function renderError(extraProps: ErrorMessageProps): null | React.ReactNode {
-  if (!extraProps.title) return null
-  return <ErrorMessage {...extraProps} />
-}
