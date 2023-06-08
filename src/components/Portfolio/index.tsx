@@ -11,7 +11,7 @@ const Profile = lazy(() => import('@components/Profile'))
 
 export default function Portfolio() {
   return (
-    <main className="tm-container d-flex flex-wrap justify-content-between pt-md-3 pt-xl-5 pb-md-3 px-xl-5 px-lg-3 px-md-2 p-sm-4 p-2">
+    <main className="tm-container d-flex flex-wrap justify-content-between pt-md-3 pt-xl-5 pb-md-3 px-xl-5 px-lg-3 px-md-2 p-sm-4 px-2 py-3">
       <Suspense
         fallback={<section style={{ minHeight: 1000 }} className="tm-profile bg-opacity"></section>}
       >

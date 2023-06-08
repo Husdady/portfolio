@@ -4,9 +4,8 @@
 }
 
 .proyects-list.loader .proyect .col {
-  height: 150px;
-  background-color: rgba(255, 255, 255, 0.16);
   animation: fade linear 2.5s infinite;
+  background-color: rgba(255, 255, 255, 0.16);
 }
 
 @keyframes fade {
@@ -79,7 +78,7 @@
 
 @media only screen and (max-width: 767px) {
   .proyects {
-    row-gap: 35px;
+    row-gap: 0.75rem;
   }
 }
 
@@ -99,9 +98,23 @@
   }
 }
 
-@media only screen and (max-width: 575px) {
+@media screen and (min-width: 576px) {
+  .proyects-list.loader .proyect .col {
+    height: 150px !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .proyects {
+    row-gap: 1.15rem;
+  }
+
   .proyects .proyect .proyect-img {
     height: 250px;
+  }
+
+  .proyects-list.loader .proyect .col {
+    height: 210px;
   }
 }
 
