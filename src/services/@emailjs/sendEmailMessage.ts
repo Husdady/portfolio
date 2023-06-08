@@ -47,8 +47,6 @@ export default async function sendEmailMessage({
         fullname: data.fullname
       }
 
-      console.log('[START]')
-
       // Send message to email 'husdadymena@gmail.com'
       await emailjs.send(EMAILJS_SERVICE_ID || '', EMAILJS_TEMPLATE_ID || '', templateParams)
 

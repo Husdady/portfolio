@@ -39,7 +39,7 @@ export default function ContactForm() {
         <MultiLangText dictionaryKey="contact-xaks20" />
       </h2>
 
-      <form noValidate className="contact-form" onSubmit={handleSubmit(submit)}>
+      <form noValidate className="contact-form pb-2" onSubmit={handleSubmit(submit)}>
         <input
           {...register('fullname')}
           type="text"

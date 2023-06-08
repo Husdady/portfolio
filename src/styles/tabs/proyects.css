@@ -35,9 +35,7 @@
 
 .proyects .proyect .proyect-title {
   white-space: nowrap;
-  overflow: hidden;
   color: var(--bs-info);
-  /* padding: 0.65rem 1rem; */
   padding-top: 0.75rem;
   padding-bottom: 0.65rem;
   padding-left: 1rem;
@@ -85,9 +83,19 @@
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 961px) {
   .proyects {
     max-height: 500px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .proyects {
+    padding-bottom: 0 !important;
+  }
+
+  .proyects-separator {
+    margin-bottom: 1.25rem !important;
   }
 }
 

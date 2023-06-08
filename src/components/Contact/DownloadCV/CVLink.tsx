@@ -24,14 +24,14 @@ function CVLink() {
     <a
       target="_blank"
       rel="noreferrer"
-      className="text-white"
+      className="ms-4 text-white download-cv-link"
       href={isESLang ? CV_LINK_ES : CV_LINK_EN}
     >
       <Suspense fallback={null}>
         <Button
           icon={<FontAwesomeIcon icon="file-download" />}
           title={<MultiLangText dictionaryKey="contact-as0125" />}
-          className="download-cv px-4 rounded bg-danger text-white h-100"
+          className="download-cv  px-4 rounded bg-danger text-white h-100"
         />
       </Suspense>
     </a>

@@ -51,7 +51,7 @@ function AboutMe() {
         >
           <MultiLangText dictionaryKey="profile-xmaks8" />
         </a>{' '}
-        and{' '}
+        <MultiLangText dictionaryKey="and" />{' '}
         <a
           target="_blank"
           rel="noreferrer"

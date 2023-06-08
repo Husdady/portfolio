@@ -2,7 +2,7 @@
 import { CSSProperties } from 'react'
 
 export const style: CSSProperties = {
-  borderTop: 1,
-  borderTopColor: '#dc3545',
+  borderTop: 2,
+  borderTopColor: '#374151',
   borderStyle: 'solid'
 }

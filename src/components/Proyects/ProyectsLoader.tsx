@@ -15,7 +15,7 @@ function ProyectsLoader() {
     <section className="proyects-list loader">
       <Row
         as="ul"
-        className="proyects list-unstyled mb-0 pe-2 row row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1"
+        className="proyects list-unstyled mb-0 pb-4 row row-cols-xl-3 row-cols-lg-2 row-cols-md-2 row-cols-sm-2 row-cols-1"
         {...Props.defaultResponsiveGrids}
       >
         {createList(MAX_PROYECTS_LOADER).map((i) => (

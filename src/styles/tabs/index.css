@@ -24,6 +24,9 @@
 @media (max-width: 960px) {
   .tm-information {
     width: 100%;
-    padding-bottom: 2em;
+  }
+
+  h5.mt-3.mb-4.ms-xl-3.text-decoration-underline.text-warning {
+    margin-bottom: 0.75rem !important;
   }
 }

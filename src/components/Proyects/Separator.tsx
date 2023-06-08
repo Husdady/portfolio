@@ -2,7 +2,11 @@
 // Librarys
 import React from 'react'
 
-interface SeparatorProps {
+// Interfaces
+import { OnlyClassNameProp } from '@custom-types/global-interfaces'
+import classnames from '@utils/classnames'
+
+interface SeparatorProps extends OnlyClassNameProp {
   color?: string
   height?: string
   withoutMarginTop?: boolean
@@ -13,6 +17,7 @@ const Separator: React.FC<SeparatorProps> = ({
   height = '1px',
   color = '#5d5d5d',
   withoutMarginTop = false,
+  className,
   style = {}
 }: SeparatorProps) => {
   // Define styles for the Separator
@@ -39,7 +44,7 @@ const Separator: React.FC<SeparatorProps> = ({
     }
   }, [])
 
-  return <div className="w-100 bg-red mb-3" style={separatorStyle}></div>
+  return <div className={classnames([className, 'w-100 bg-red mb-3'])} style={separatorStyle}></div>
 }
 
 export default React.memo(Separator)

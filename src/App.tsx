@@ -1,5 +1,5 @@
 // Librarys
-import { Suspense } from 'react'
+import { Fragment, Suspense } from 'react'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
@@ -7,7 +7,8 @@ import { library, IconPack } from '@fortawesome/fontawesome-svg-core'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 // Components
-import Loading from '@components/Loading/index'
+import Loading from '@components/Loading'
+import AppTitle from '@components/AppTitle'
 
 // Utils
 import lazy from '@utils/lazy'
@@ -30,14 +31,18 @@ const PageNotFound = lazy(() => import('@components/PageNotFound'))
 
 export default function App() {
   return (
-    <Suspense fallback={<Loading />}>
-      <Router>
-        <Switch>
-          <Route path="/" exact component={Portfolio} />
-          <Route path="/404" component={PageNotFound} />
-          <Redirect to="/404" />
-        </Switch>
-      </Router>
-    </Suspense>
+    <Fragment>
+      <AppTitle />
+
+      <Suspense fallback={<Loading />}>
+        <Router>
+          <Switch>
+            <Route path="/" exact component={Portfolio} />
+            <Route path="/404" component={PageNotFound} />
+            <Redirect to="/404" />
+          </Switch>
+        </Router>
+      </Suspense>
+    </Fragment>
   )
 }

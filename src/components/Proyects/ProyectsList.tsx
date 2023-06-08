@@ -41,7 +41,7 @@ const ProyectsList: React.FC<ProyectsListProps> = ({ grids, proyects }: Proyects
                 />
               </figure>
 
-              <div className="proyect-title d-flex justify-content-center w-100">
+              <div className="proyect-title d-flex justify-content-center w-100 overflow-hidden">
                 <FontAwesomeIcon icon="file-code" className="me-2" />
 
                 <React.Suspense fallback={null}>

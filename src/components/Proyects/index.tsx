@@ -46,7 +46,7 @@ export default function Proyects({
       </div>
 
       <React.Suspense fallback={null}>
-        <Separator />
+        <Separator className="proyects-separator" />
       </React.Suspense>
 
       <div className="px-4 pb-4">

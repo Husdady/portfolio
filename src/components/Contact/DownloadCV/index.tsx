@@ -13,8 +13,12 @@ const CVLink = lazy(() => import('./CVLink'))
 
 function DownloadCV() {
   return (
-    <Container fluid as="section" className="d-flex justify-content-between px-0 px-md-3 px-lg-3">
-      <h2 className="text-danger">
+    <Container
+      fluid
+      as="section"
+      className="d-flex align-items-center justify-content-between px-0 px-md-3 px-lg-3 flex-wrap"
+    >
+      <h2 className="text-danger mb-0">
         <MultiLangText dictionaryKey="contact-yc712t" />:
       </h2>
 

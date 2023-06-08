@@ -18,7 +18,7 @@ const SkillsList = lazy(() => import('./SkillsList'))
 
 export default function Skills() {
   return (
-    <div className="text-white-50" style={{ overflowY: 'auto', maxHeight: '740px' }}>
+    <div className="text-white-50">
       <h2 className="text-danger">
         <MultiLangText dictionaryKey="skills-xaks20" />
       </h2>

@@ -50,6 +50,7 @@
     width: 100%;
     max-height: initial;
     margin-bottom: 1rem !important;
+    min-height: 758px;
   }
 }
 

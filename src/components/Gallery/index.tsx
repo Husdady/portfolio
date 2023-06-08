@@ -4,9 +4,6 @@ import Gallery from 'react-grid-gallery'
 // Components
 import MultiLangText from '@components/MultiLangText'
 
-// Constants
-import { galleryStyle } from './constants'
-
 // JSON
 import gallery from '@assets/data/photos.json'
 
@@ -17,7 +14,7 @@ export default function MyGalleryPhotos() {
         <MultiLangText dictionaryKey="gallery-xaks20" />
       </h2>
 
-      <section id="gallery" style={galleryStyle}>
+      <section id="gallery">
         <Gallery
           margin={5}
           rowHeight={250}

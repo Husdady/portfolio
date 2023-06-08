@@ -2,7 +2,9 @@
   {
     "language": "es",
     "dictionary": {
+      "and": "y",
       "profile-dajs10": "Hola",
+      "app-title": "Husdady, Desarrollador Fullstack",
       "profile-pa34sj": "Soy Desarrollador Fullstack, comencé a desarrollar aplicaciones",
       "profile-ald12s": "desde hace 3 años, mi habilidad principal es Javascript",
       "profile-ansoc9": "mi interés por el mundo de la programación empezó cuando aprendí HTML a través del curso impartido por Google:",
@@ -42,7 +44,9 @@
   {
     "language": "en",
     "dictionary": {
+      "and": "and",
       "profile-dajs10": "Hi there",
+      "app-title": "Husdady, Fullstack Developer",
       "profile-pa34sj": "I am Fullstack Developer, I started developing applications",
       "profile-ald12s": "3 years ago, my main skill is Javascript",
       "profile-ansoc9": "my interest in the world of development began when i learned HTML through the course given by Google:",

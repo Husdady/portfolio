@@ -19,7 +19,7 @@ const Flag = lazy(() => import('./Flag'))
 export const fallbackStyle = { height: '30px' }
 
 export default function Languages() {
-  const { lang, onChangeLanguage } = useLanguages()
+  const { lang, setLang } = useLanguages()
 
   return (
     <section id="languages">
@@ -33,7 +33,7 @@ export default function Languages() {
                 title={flag.country}
                 currentLanguage={lang}
                 language={flag.language}
-                onChangeLanguage={onChangeLanguage}
+                onChangeLanguage={setLang}
               />
             </Suspense>
           )

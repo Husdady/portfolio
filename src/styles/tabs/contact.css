@@ -72,6 +72,20 @@
   }
 }
 
+@media (max-width: 450px) {
+  .download-cv,
+  .download-cv-link {
+    width: 100%;
+  }
+
+  .download-cv-link {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.65rem;
+    margin-left: 0 !important;
+  }
+}
+
 @media (max-width: 320px) {
   .all-social-networks {
     width: 100%;

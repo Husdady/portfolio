@@ -18,7 +18,7 @@ export default function Tabs() {
   const { activeTab, currentTab, setActiveTab } = useTabs()
 
   return (
-    <section className="tm-information bg-opacity inactive-tab">
+    <section className="tm-information bg-opacity inactive-tab overflow-hidden">
       <Nav as="ul" variant="tabs" defaultActiveKey="skills" className="border-opacity">
         <Suspense fallback={null}>
           <TabsList updateTab={setActiveTab} />

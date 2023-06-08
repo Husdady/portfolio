@@ -20,7 +20,7 @@ export const Props: ProyectsProps = Object.freeze({
     xs: 1,
     sm: 2,
     md: 2,
-    lg: 3,
+    lg: 2,
     xl: 3,
     xxl: 4
   }
