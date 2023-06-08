@@ -1,5 +1,5 @@
 // Librarys
-import { memo, useCallback } from 'react'
+import { memo, useCallback, useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 
 // Hooks
@@ -10,9 +10,10 @@ import { HashtagType } from './interfaces'
 
 // JSON
 import hashtags from '@assets/data/hashtags.json'
+import useMounted from '@hooks/useMounted'
 
 function Hashtags() {
-  const { lang } = useLanguages()
+  const { lang, isESLang } = useLanguages()
 
   // Callback for create abilities
   const createAbilities = useCallback((language: string) => {
@@ -21,7 +22,14 @@ function Hashtags() {
     }, [])
   }, [])
 
-  return <TypeAnimation speed={5} repeat={Infinity} sequence={createAbilities(lang)} wrapper="h5" />
+  if (lang === 'es') {
+    console.log(lang)
+    return (
+      <TypeAnimation speed={5} wrapper="h5" repeat={Infinity} sequence={createAbilities(lang)} />
+    )
+  }
+
+  return <TypeAnimation speed={5} wrapper="h5" repeat={Infinity} sequence={createAbilities(lang)} />
 }
 
 export default memo(Hashtags)

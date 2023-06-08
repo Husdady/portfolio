@@ -38,4 +38,6 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({
   )
 }
 
-export default React.memo(ErrorMessage)
+export default React.memo(ErrorMessage, (prevProps, nextProps) => {
+  return prevProps.title === nextProps.title
+})
