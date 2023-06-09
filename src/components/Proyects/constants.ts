@@ -3,7 +3,8 @@ import { ProyectsProps } from './interfaces'
 
 // Constants
 export const MAX_PROYECTS_LOADER = 10
-export const LIMIT_CHARACTERS_FOR_THE_PROYECT_NAME = 20
+export const XL_LIMIT_CHARACTERS_FOR_THE_PROYECT_NAME = 20
+export const DEFAULT_LIMIT_CHARACTERS_FOR_THE_PROYECT_NAME = 48
 
 export const proyectImgStyle: React.CSSProperties = {
   objectFit: 'cover'

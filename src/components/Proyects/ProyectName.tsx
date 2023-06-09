@@ -11,7 +11,10 @@ import { ProyectNameProps } from './interfaces'
 import truncate from '@utils/truncate'
 
 // Constants
-import { LIMIT_CHARACTERS_FOR_THE_PROYECT_NAME } from './constants'
+import {
+  XL_LIMIT_CHARACTERS_FOR_THE_PROYECT_NAME,
+  DEFAULT_LIMIT_CHARACTERS_FOR_THE_PROYECT_NAME
+} from './constants'
 
 function ProyectName({ value }: ProyectNameProps) {
   const { lang } = useLanguages()
@@ -23,7 +26,12 @@ function ProyectName({ value }: ProyectNameProps) {
 
   return (
     <h6 className="mb-0 text-center">
-      {truncate(proyectName, LIMIT_CHARACTERS_FOR_THE_PROYECT_NAME)}
+      {truncate(
+        proyectName,
+        window.innerWidth >= 1200
+          ? XL_LIMIT_CHARACTERS_FOR_THE_PROYECT_NAME
+          : DEFAULT_LIMIT_CHARACTERS_FOR_THE_PROYECT_NAME
+      )}
     </h6>
   )
 }
