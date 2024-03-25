@@ -1,21 +1,47 @@
 [
   {
     "id": "jy5w23",
-    "name": "Emprendimiento y Salud",
-    "proyectImg": "https://i.imgur.com/IiweRih.png",
-    "url": "https://www.emprendimientoysalud.com"
+    "name": "Emys, Online Shop",
+    "proyectImg": "https://i.imgur.com/NdPEiBb.png",
+    "url": "https://www.emys.pe"
   },
   {
     "id": "z2lk90",
-    "name": "CMS - Emprendimiento y Salud",
-    "proyectImg": "https://i.imgur.com/kLDv1Xc.png",
-    "url": "https://app-emprendimiento-y-salud.vercel.app"
+    "name": "Emys CRM",
+    "proyectImg": "https://i.imgur.com/gqXXwJC.png",
+    "url": "https://emys-crm.vercel.app"
   },
   {
     "id": "f71m0p",
-    "name": "Nutrición y Salud Personal",
+    "name": "Emys Blog Personal",
     "proyectImg": "https://i.imgur.com/KuUOjuZ.png",
     "url": "https://nutricionysaludpersonal.blogspot.com"
+  },
+  {
+    "id": "kd083d",
+    "name": "Jobs App",
+    "proyectImg": "https://i.imgur.com/rrQsM7U.png",
+    "url": "https://www.pro.pinch.cleaning/account/jobs"
+  },
+  {
+    "id": "cd083d",
+    "name": "Calendar App",
+    "proyectImg": "https://i.imgur.com/ObyFCRO.png"
+  },
+  {
+    "id": "cd083t",
+    "name": "Cleaners Work App",
+    "proyectImg": "https://i.imgur.com/dfRGkoi.png"
+  },
+  {
+    "id": "cd083x",
+    "name": "Customers Work App",
+    "proyectImg": "https://i.imgur.com/p9qMv0Y.png"
+  },
+  {
+    "id": "cd083z",
+    "name": "Jobs Gun Work App",
+    "proyectImg": "https://i.imgur.com/KBCYcz3.png"
   },
   {
     "id": "kd082c",
@@ -28,12 +54,6 @@
     "name": "ERP Standard",
     "proyectImg": "https://i.imgur.com/qJdcNCv.png",
     "url": "https://desarrollador.datecloud.pe"
-  },
-  {
-    "id": "kd083d",
-    "name": "Pinch Pro Jobs",
-    "proyectImg": "https://i.imgur.com/GRHnTmg.png",
-    "url": "https://dev6345.editorx.io/react-test"
   },
   {
     "id": "ba8k0s",
@@ -54,26 +74,20 @@
   },
   {
     "id": "zl7sh6",
-    "name": "CMS - Multiservicios Espay",
+    "name": "CRM Multiservicios Espay",
     "proyectImg": "https://i.imgur.com/3wWP0x8.png",
     "url": "https://multiservicios-espay-dashboard.herokuapp.com"
   },
   {
     "id": "aq182o",
     "name": "Intellitec",
-    "proyectImg": "https://i.imgur.com/LHmEdM6.png",
-    "url": "https://intellitec.pe"
+    "proyectImg": "https://i.imgur.com/LHmEdM6.png"
   },
   {
     "id": "h209sn",
     "name": "Movies Awards Ballot",
     "proyectImg": "https://i.imgur.com/rV69e7N.png",
     "url": "https://husdady.github.io/movie-awards-ballot"
-  },
-  {
-    "id": "klp196",
-    "name": "Selenium IDE Tests",
-    "proyectImg": "https://i.imgur.com/jzUwgJS.png"
   },
   {
     "id": "sy685i",
@@ -83,8 +97,7 @@
   },
   {
     "id": "89ufj4",
-    "name": "API Whatsapp",
-    "proyectImg": "https://i.imgur.com/RXoO10D.png",
-    "url": "https://sharedapis.com"
+    "name": "Shared APIS",
+    "proyectImg": "https://i.imgur.com/RXoO10D.png"
   }
 ]
